@@ -41,21 +41,21 @@ const EnQueAyudamos = () => {
     };
 
     return (
-        <section id="como-ayudamos" className="relative py-28 lg:py-36 overflow-hidden">
+        <section id="como-ayudamos" className="relative py-16 md:py-28 lg:py-36 overflow-hidden">
             <div
                 className="absolute top-0 left-0 right-0 h-px"
                 style={{ background: 'linear-gradient(90deg, transparent, rgba(37,99,235,0.3), transparent)' }}
             />
 
             <motion.div
-                className="relative z-10 max-w-5xl mx-auto px-6"
+                className="relative z-10 max-w-5xl mx-auto px-5 md:px-6"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: '-100px' }}
             >
                 {/* Header */}
-                <div className="text-center mb-16">
+                <div className="text-center mb-10 md:mb-16">
                     <motion.span
                         variants={itemVariants}
                         className="inline-block text-xs font-medium tracking-[0.2em] text-[#38BDF8] uppercase mb-6"
@@ -65,7 +65,7 @@ const EnQueAyudamos = () => {
 
                     <motion.h2
                         variants={itemVariants}
-                        className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight"
+                        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight"
                     >
                         <span className="text-white">Nosotros hacemos el trabajo, </span>
                         <br className="hidden sm:block" />
@@ -80,7 +80,7 @@ const EnQueAyudamos = () => {
 
                     <motion.p
                         variants={itemVariants}
-                        className="mt-5 text-[#94A3B8] text-lg max-w-2xl mx-auto"
+                        className="mt-4 md:mt-5 text-[#94A3B8] text-base md:text-lg max-w-2xl mx-auto"
                     >
                         Te acompañamos de principio a fin. No te dejamos con un software y un manual.
                         <span className="text-white"> Te entregamos una operación funcionando.</span>
@@ -89,7 +89,7 @@ const EnQueAyudamos = () => {
 
                 {/* Cards */}
                 <motion.div
-                    className="grid grid-cols-1 md:grid-cols-3 gap-6"
+                    className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6"
                     variants={containerVariants}
                 >
                     {pasos.map((paso, index) => {
@@ -101,7 +101,7 @@ const EnQueAyudamos = () => {
                                 className="group"
                             >
                                 <motion.div
-                                    className="relative rounded-xl p-7 h-full overflow-hidden"
+                                    className="relative rounded-xl p-5 md:p-7 h-full overflow-hidden"
                                     style={{
                                         background: 'linear-gradient(135deg, rgba(10,14,24,0.95) 0%, rgba(7,10,18,0.98) 100%)',
                                         border: '1px solid rgba(37,99,235,0.1)',
@@ -120,7 +120,7 @@ const EnQueAyudamos = () => {
 
                                     {/* Icon */}
                                     <div
-                                        className="w-12 h-12 rounded-lg flex items-center justify-center mb-5"
+                                        className="w-10 h-10 md:w-12 md:h-12 rounded-lg flex items-center justify-center mb-4 md:mb-5"
                                         style={{
                                             background: 'rgba(37,99,235,0.1)',
                                             border: '1px solid rgba(37,99,235,0.2)',
@@ -129,7 +129,7 @@ const EnQueAyudamos = () => {
                                         <Icon className="w-5 h-5 text-[#3B82F6]" strokeWidth={1.5} />
                                     </div>
 
-                                    <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#38BDF8] transition-colors duration-300">
+                                    <h3 className="text-base md:text-lg font-semibold text-white mb-1.5 md:mb-2 group-hover:text-[#38BDF8] transition-colors duration-300">
                                         {paso.titulo}
                                     </h3>
                                     <p className="text-sm text-[#94A3B8] leading-relaxed">
@@ -150,7 +150,7 @@ const EnQueAyudamos = () => {
                 {/* Bottom callout */}
                 <motion.div
                     variants={itemVariants}
-                    className="flex justify-center mt-14"
+                    className="flex justify-center mt-10 md:mt-14"
                 >
                     <div
                         className="px-5 py-2.5 rounded-full"

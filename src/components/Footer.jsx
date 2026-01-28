@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
     return (
-        <footer className="relative py-14" style={{ backgroundColor: '#05060A', borderTop: '1px solid rgba(37,99,235,0.1)' }}>
-            <div className="max-w-5xl mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <footer className="relative py-10 md:py-14" style={{ backgroundColor: '#05060A', borderTop: '1px solid rgba(37,99,235,0.1)' }}>
+            <div className="max-w-5xl mx-auto px-5 md:px-6">
+                <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-10">
                     {/* Logo */}
                     <div className="col-span-1 md:col-span-2">
                         <Link to="/" className="flex items-center gap-2 mb-4">
@@ -58,7 +58,7 @@ const Footer = () => {
                 </div>
 
                 {/* Copyright */}
-                <div className="border-t border-[#2563EB]/10 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="border-t border-[#2563EB]/10 mt-8 md:mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <p className="text-xs text-[#64748B]/60">
                         © {new Date().getFullYear()} VEXIA. Todos los derechos reservados.
                     </p>

@@ -44,7 +44,7 @@ const SectorCard = ({ sector, index }) => {
             onHoverEnd={() => setIsHovered(false)}
             className="group"
         >
-            <Link to={`/sectores/${sector.slug}`} className="relative block rounded-xl overflow-hidden h-64">
+            <Link to={`/sectores/${sector.slug}`} className="relative block rounded-xl overflow-hidden h-44 sm:h-56 lg:h-64">
                 <motion.div
                     className="relative h-full"
                     whileHover={{ y: -4 }}
@@ -67,7 +67,7 @@ const SectorCard = ({ sector, index }) => {
                     />
 
                     {/* Content */}
-                    <div className="absolute inset-0 p-5 flex flex-col justify-between z-10">
+                    <div className="absolute inset-0 p-4 sm:p-5 flex flex-col justify-between z-10">
                         {/* Icon */}
                         <div
                             className="w-10 h-10 rounded-lg flex items-center justify-center"
@@ -81,10 +81,10 @@ const SectorCard = ({ sector, index }) => {
 
                         {/* Text */}
                         <div>
-                            <h3 className="text-lg font-semibold text-white mb-1.5 group-hover:text-[#38BDF8] transition-colors duration-300">
+                            <h3 className="text-base sm:text-lg font-semibold text-white mb-1 sm:mb-1.5 group-hover:text-[#38BDF8] transition-colors duration-300">
                                 {sector.name}
                             </h3>
-                            <p className="text-sm text-[#94A3B8] leading-relaxed mb-3">{sector.headline}</p>
+                            <p className="text-xs sm:text-sm text-[#94A3B8] leading-relaxed mb-2 sm:mb-3">{sector.headline}</p>
 
                             {/* CTA */}
                             <motion.div
@@ -114,16 +114,16 @@ const Sectores = () => {
     ];
 
     return (
-        <section id="sectores" className="relative py-28 lg:py-36 overflow-hidden">
+        <section id="sectores" className="relative py-16 md:py-28 lg:py-36 overflow-hidden">
             <div
                 className="absolute top-0 left-0 right-0 h-px"
                 style={{ background: 'linear-gradient(90deg, transparent, rgba(37,99,235,0.3), transparent)' }}
             />
 
-            <div className="relative z-10 max-w-6xl mx-auto px-6">
+            <div className="relative z-10 max-w-6xl mx-auto px-5 md:px-6">
                 {/* Header */}
                 <motion.div
-                    className="text-center mb-14"
+                    className="text-center mb-10 md:mb-14"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -132,7 +132,7 @@ const Sectores = () => {
                     <span className="inline-block text-xs font-medium tracking-[0.2em] text-[#38BDF8] uppercase mb-6">
                         Tu industria
                     </span>
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight">
                         Entendemos los desafíos{' '}
                         <span
                             className="text-[#3B82F6]"
@@ -141,13 +141,13 @@ const Sectores = () => {
                             de tu sector
                         </span>
                     </h2>
-                    <p className="mt-4 text-[#94A3B8] text-lg max-w-xl mx-auto">
+                    <p className="mt-3 md:mt-4 text-[#94A3B8] text-base md:text-lg max-w-xl mx-auto">
                         No aplicamos la misma solución para todos. Diseñamos automatización específica para cómo funciona tu industria.
                     </p>
                 </motion.div>
 
                 {/* Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 lg:gap-5">
                     {sectores.map((sector, index) => (
                         <SectorCard key={sector.slug} sector={sector} index={index} />
                     ))}
@@ -155,7 +155,7 @@ const Sectores = () => {
 
                 {/* Footer */}
                 <motion.div
-                    className="text-center mt-12"
+                    className="text-center mt-8 md:mt-12"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}

@@ -42,18 +42,19 @@ const Hero = () => {
     };
 
     return (
-        <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6">
+        <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-5 md:px-6">
 
-            <div className="relative z-10 max-w-4xl mx-auto text-center">
+            <div className="relative z-10 max-w-4xl mx-auto text-center pt-16 md:pt-0">
 
                 {/* Badge */}
+                {/* Badge - Hidden on mobile for cleaner first impression */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="mb-10"
+                    className="mb-6 md:mb-10 hidden sm:block"
                 >
-                    <span className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-[#2563EB]/30 bg-[#2563EB]/5 backdrop-blur-sm">
+                    <span className="inline-flex items-center gap-3 px-4 py-2 md:px-5 md:py-2.5 rounded-full border border-[#2563EB]/30 bg-[#2563EB]/5 backdrop-blur-sm">
                         <motion.span
                             className="w-2 h-2 rounded-full bg-[#38BDF8]"
                             style={{ boxShadow: '0 0 10px rgba(56,189,248,0.8)' }}
@@ -68,7 +69,7 @@ const Hero = () => {
 
                 {/* Main Title - Human centered */}
                 <motion.h1
-                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.08] tracking-tight"
+                    className="text-[2rem] leading-[1.15] sm:text-5xl md:text-6xl lg:text-7xl font-bold sm:leading-[1.08] tracking-tight"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
@@ -97,7 +98,7 @@ const Hero = () => {
 
                 {/* Subtitle - Benefit focused */}
                 <motion.p
-                    className="mt-8 text-lg sm:text-xl text-[#94A3B8] max-w-2xl mx-auto leading-relaxed"
+                    className="mt-5 md:mt-8 text-base sm:text-lg md:text-xl text-[#94A3B8] max-w-xl md:max-w-2xl mx-auto leading-relaxed px-2 sm:px-0"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
@@ -108,13 +109,13 @@ const Hero = () => {
 
                 {/* CTAs */}
                 <motion.div
-                    className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12"
+                    className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-8 md:mt-12 w-full sm:w-auto px-2 sm:px-0"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.7 }}
                 >
                     <motion.button
-                        className="relative w-full sm:w-auto rounded-full bg-gradient-to-r from-[#2563EB] to-[#3B82F6] px-8 py-4 text-sm font-semibold text-white overflow-hidden"
+                        className="relative w-full sm:w-auto rounded-full bg-gradient-to-r from-[#2563EB] to-[#3B82F6] px-6 sm:px-8 py-4 text-base sm:text-sm font-semibold text-white overflow-hidden min-h-[56px] sm:min-h-0"
                         style={{
                             boxShadow: '0 4px 20px rgba(37, 99, 235, 0.4), 0 0 40px rgba(37, 99, 235, 0.2), inset 0 1px 0 rgba(255,255,255,0.15)'
                         }}
@@ -134,7 +135,7 @@ const Hero = () => {
                     </motion.button>
 
                     <motion.button
-                        className="w-full sm:w-auto rounded-full border border-[#2563EB]/40 bg-transparent px-8 py-4 text-sm font-medium text-white"
+                        className="w-full sm:w-auto rounded-full border border-[#2563EB]/40 bg-transparent px-6 sm:px-8 py-4 text-base sm:text-sm font-medium text-white min-h-[56px] sm:min-h-0"
                         whileHover={{
                             borderColor: '#2563EB',
                             backgroundColor: 'rgba(37,99,235,0.08)',
@@ -148,7 +149,7 @@ const Hero = () => {
 
                 {/* Benefits - Human language */}
                 <motion.div
-                    className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-24 max-w-3xl mx-auto"
+                    className="grid grid-cols-1 gap-3 mt-12 sm:grid-cols-3 sm:gap-6 sm:mt-24 max-w-3xl mx-auto w-full"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.9 }}
@@ -156,11 +157,11 @@ const Hero = () => {
                     {benefits.map((benefit, i) => (
                         <motion.div
                             key={i}
-                            className="relative rounded-xl p-6 backdrop-blur-sm overflow-hidden text-left"
+                            className="relative rounded-xl p-4 sm:p-6 backdrop-blur-sm overflow-hidden text-left"
                             style={{
                                 background: 'linear-gradient(135deg, rgba(10,14,24,0.9) 0%, rgba(7,10,18,0.95) 100%)',
                                 border: '1px solid rgba(37,99,235,0.12)',
-                                boxShadow: '0 4px 30px rgba(0,0,0,0.4)'
+                                boxShadow: '0 4px 20px rgba(0,0,0,0.3)'
                             }}
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -172,7 +173,7 @@ const Hero = () => {
                             }}
                         >
                             <motion.div
-                                className="text-3xl font-bold text-[#3B82F6] mb-2"
+                                className="text-2xl sm:text-3xl font-bold text-[#3B82F6] mb-1 sm:mb-2"
                                 style={{ textShadow: '0 0 15px rgba(56,189,248,0.3)' }}
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
@@ -180,7 +181,7 @@ const Hero = () => {
                             >
                                 <AnimatedCounter value={benefit.value} suffix={benefit.suffix} delay={1200 + i * 150} />
                             </motion.div>
-                            <div className="text-sm text-[#94A3B8] leading-relaxed">{benefit.label}</div>
+                            <div className="text-xs sm:text-sm text-[#94A3B8] leading-relaxed">{benefit.label}</div>
                         </motion.div>
                     ))}
                 </motion.div>

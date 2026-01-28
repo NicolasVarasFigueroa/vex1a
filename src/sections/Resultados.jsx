@@ -88,16 +88,16 @@ const Resultados = () => {
     ];
 
     return (
-        <section className="relative py-24 lg:py-32 overflow-hidden">
+        <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
             <div
                 className="absolute top-0 left-0 right-0 h-px"
                 style={{ background: 'linear-gradient(90deg, transparent, rgba(37,99,235,0.3), transparent)' }}
             />
 
-            <div className="relative z-10 max-w-5xl mx-auto px-6">
+            <div className="relative z-10 max-w-5xl mx-auto px-5 md:px-6">
                 {/* Header */}
                 <motion.div
-                    className="text-center mb-14"
+                    className="text-center mb-10 md:mb-14"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -105,7 +105,7 @@ const Resultados = () => {
                     <span className="inline-block text-xs font-medium tracking-[0.2em] text-[#38BDF8] uppercase mb-6">
                         Lo que tu negocio siente
                     </span>
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
                         Así cambia tu día a día{' '}
                         <span
                             className="text-[#3B82F6]"
@@ -114,14 +114,14 @@ const Resultados = () => {
                             con VEXIA
                         </span>
                     </h2>
-                    <p className="mt-5 text-[#94A3B8] text-lg max-w-xl mx-auto">
+                    <p className="mt-4 md:mt-5 text-[#94A3B8] text-base md:text-lg max-w-xl mx-auto">
                         No son solo números. Es tiempo, tranquilidad y control real sobre tu operación.
                     </p>
                 </motion.div>
 
                 {/* Benefits Grid */}
                 <motion.div
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16"
+                    className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 mb-10 md:mb-16"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -132,7 +132,7 @@ const Resultados = () => {
                         return (
                             <motion.div
                                 key={i}
-                                className="rounded-xl p-5"
+                                className="rounded-xl p-4 md:p-5"
                                 style={{
                                     background: 'linear-gradient(135deg, rgba(10,14,24,0.95) 0%, rgba(7,10,18,0.98) 100%)',
                                     border: '1px solid rgba(37,99,235,0.1)',
@@ -147,16 +147,16 @@ const Resultados = () => {
                                     boxShadow: '0 15px 40px rgba(0,0,0,0.4), 0 0 20px rgba(37,99,235,0.06)'
                                 }}
                             >
-                                <Icon className="w-5 h-5 mb-3 text-[#3B82F6]" strokeWidth={1.5} />
+                                <Icon className="w-4 h-4 md:w-5 md:h-5 mb-2 md:mb-3 text-[#3B82F6]" strokeWidth={1.5} />
                                 <div
-                                    className="text-3xl font-bold text-[#3B82F6] mb-2"
+                                    className="text-2xl md:text-3xl font-bold text-[#3B82F6] mb-1 md:mb-2"
                                     style={{ textShadow: '0 0 15px rgba(56,189,248,0.3)' }}
                                 >
                                     {b.prefix && <span>{b.prefix}</span>}
                                     <Counter value={b.value} suffix={b.suffix} delay={200 + i * 100} />
                                 </div>
-                                <div className="text-sm font-medium text-white mb-1">{b.titulo}</div>
-                                <div className="text-xs text-[#64748B] leading-relaxed">{b.descripcion}</div>
+                                <div className="text-xs md:text-sm font-medium text-white mb-0.5 md:mb-1">{b.titulo}</div>
+                                <div className="text-[10px] md:text-xs text-[#64748B] leading-relaxed hidden sm:block">{b.descripcion}</div>
                             </motion.div>
                         );
                     })}
@@ -164,7 +164,7 @@ const Resultados = () => {
 
                 {/* Before/After comparison */}
                 <motion.div
-                    className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                    className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
@@ -172,7 +172,7 @@ const Resultados = () => {
                 >
                     {/* Before */}
                     <motion.div
-                        className="rounded-xl p-5"
+                        className="rounded-xl p-4 md:p-5"
                         style={{
                             background: 'rgba(239,68,68,0.02)',
                             border: '1px solid rgba(239,68,68,0.1)',
@@ -197,7 +197,7 @@ const Resultados = () => {
 
                     {/* After */}
                     <motion.div
-                        className="rounded-xl p-5"
+                        className="rounded-xl p-4 md:p-5"
                         style={{
                             background: 'rgba(37,99,235,0.02)',
                             border: '1px solid rgba(37,99,235,0.12)',
@@ -223,7 +223,7 @@ const Resultados = () => {
 
                 {/* Closing */}
                 <motion.p
-                    className="text-center mt-12 text-sm text-[#64748B]"
+                    className="text-center mt-8 md:mt-12 text-xs md:text-sm text-[#64748B]"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}

@@ -36,7 +36,7 @@ const Navbar = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6 }}
             >
-                <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
+                <div className="max-w-6xl mx-auto px-5 md:px-6 flex items-center justify-between">
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-2">
                         <span className="text-white font-bold text-xl tracking-tight">
@@ -115,10 +115,10 @@ const Navbar = () => {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden text-[#94A3B8] hover:text-white transition-colors"
+                        className="md:hidden text-[#94A3B8] hover:text-white transition-colors p-2 -mr-2"
                         onClick={() => setMobileOpen(!mobileOpen)}
                     >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             {mobileOpen ? (
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
                             ) : (
@@ -139,7 +139,7 @@ const Navbar = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                     >
-                        <div className="flex flex-col items-center justify-center h-full gap-8">
+                        <div className="flex flex-col items-center justify-center h-full gap-6 px-6">
                             {links.map((link, index) => (
                                 <motion.div
                                     key={link.name}
@@ -151,7 +151,7 @@ const Navbar = () => {
                                         <Link
                                             to={link.href}
                                             onClick={() => setMobileOpen(false)}
-                                            className="text-2xl text-white hover:text-[#3B82F6] transition-colors"
+                                            className="text-xl text-white hover:text-[#3B82F6] transition-colors py-2"
                                         >
                                             {link.name}
                                         </Link>
@@ -159,7 +159,7 @@ const Navbar = () => {
                                         <a
                                             href={link.href}
                                             onClick={() => setMobileOpen(false)}
-                                            className="text-2xl text-white hover:text-[#3B82F6] transition-colors"
+                                            className="text-xl text-white hover:text-[#3B82F6] transition-colors py-2"
                                         >
                                             {link.name}
                                         </a>
@@ -168,7 +168,7 @@ const Navbar = () => {
                             ))}
 
                             <motion.button
-                                className="mt-8 text-sm font-semibold text-white px-8 py-4 rounded-full"
+                                className="mt-6 text-base font-semibold text-white px-10 py-4 rounded-full min-h-[56px] w-full max-w-xs"
                                 style={{
                                     background: 'linear-gradient(135deg, #2563EB, #3B82F6)',
                                     boxShadow: '0 4px 20px rgba(37,99,235,0.3)'

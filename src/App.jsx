@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import AnimatedBackground from './components/AnimatedBackground';
 import Hero from './sections/Hero';
 import EnQueAyudamos from './sections/EnQueAyudamos';
+import VexiaFlow from './sections/VexiaFlow';
 import Resultados from './sections/Resultados';
 import Sectores from './sections/Sectores';
 import Planes from './sections/Planes';
@@ -13,6 +14,7 @@ function HomePage() {
     return (
         <>
             <Hero />
+            <VexiaFlow />
             <EnQueAyudamos />
             <Sectores />
             <Resultados />
