@@ -288,143 +288,14 @@ const VexiaFlow = () => {
                     ))}
                 </div>
 
-                {/* Mobile Flow - Vertical */}
-                <div className="md:hidden flex flex-col items-center gap-6">
+                {/* Mobile Flow - Compact Horizontal */}
+                <div className="md:hidden flex flex-col items-center gap-8 px-2">
 
-                    {/* Channel */}
-                    <div className="flex items-center gap-4">
-                        <motion.div
-                            className="w-16 h-16 rounded-xl flex items-center justify-center"
-                            style={{
-                                background: 'linear-gradient(135deg, rgba(10,14,24,0.95) 0%, rgba(7,10,18,0.98) 100%)',
-                                border: '1px solid rgba(37,99,235,0.2)',
-                            }}
-                            animate={{
-                                boxShadow: [
-                                    `0 0 15px ${currentScene.channel.color}20`,
-                                    `0 0 25px ${currentScene.channel.color}30`,
-                                    `0 0 15px ${currentScene.channel.color}20`,
-                                ]
-                            }}
-                            transition={{ duration: 3, repeat: Infinity }}
-                        >
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key={sceneIndex + '-mobile-channel'}
-                                    initial={{ opacity: 0, scale: 0.5 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    exit={{ opacity: 0, scale: 0.5 }}
-                                    transition={{ duration: 0.3 }}
-                                >
-                                    <ChannelIcon
-                                        className="w-8 h-8"
-                                        style={{ color: currentScene.channel.color }}
-                                        strokeWidth={1.5}
-                                    />
-                                </motion.div>
-                            </AnimatePresence>
-                        </motion.div>
-                        <AnimatePresence mode="wait">
-                            <motion.span
-                                key={sceneIndex + '-mobile-channel-label'}
-                                className="text-[#94A3B8] text-sm"
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                            >
-                                {currentScene.channel.label}
-                            </motion.span>
-                        </AnimatePresence>
-                    </div>
-
-                    {/* Arrow down */}
-                    <motion.div
-                        className="w-px h-8 bg-gradient-to-b from-[#3B82F6]/50 to-transparent"
-                        animate={{ opacity: [0.3, 1, 0.3] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                    />
-
-                    {/* VEXIA */}
-                    <motion.div
-                        className="w-24 h-24 rounded-2xl flex items-center justify-center"
-                        style={{
-                            background: 'linear-gradient(135deg, rgba(37,99,235,0.15) 0%, rgba(10,14,24,0.98) 100%)',
-                            border: '1px solid rgba(37,99,235,0.4)',
-                        }}
-                        animate={{
-                            boxShadow: [
-                                '0 0 20px rgba(37,99,235,0.2)',
-                                '0 0 40px rgba(37,99,235,0.3)',
-                                '0 0 20px rgba(37,99,235,0.2)',
-                            ]
-                        }}
-                        transition={{ duration: 4, repeat: Infinity }}
-                    >
-                        <span
-                            className="text-xl font-bold text-white"
-                            style={{ textShadow: '0 0 15px rgba(59,130,246,0.5)' }}
-                        >
-                            VEXIA
-                        </span>
-                    </motion.div>
-
-                    {/* Arrow down */}
-                    <motion.div
-                        className="w-px h-8 bg-gradient-to-b from-transparent via-[#22C55E]/50 to-transparent"
-                        animate={{ opacity: [0.3, 1, 0.3] }}
-                        transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-                    />
-
-                    {/* Result */}
-                    <div className="flex items-center gap-4">
-                        <motion.div
-                            className="w-16 h-16 rounded-xl flex items-center justify-center"
-                            style={{
-                                background: 'linear-gradient(135deg, rgba(10,14,24,0.95) 0%, rgba(7,10,18,0.98) 100%)',
-                                border: '1px solid rgba(34,197,94,0.2)',
-                            }}
-                            animate={{
-                                boxShadow: [
-                                    '0 0 15px rgba(34,197,94,0.15)',
-                                    '0 0 25px rgba(34,197,94,0.25)',
-                                    '0 0 15px rgba(34,197,94,0.15)',
-                                ]
-                            }}
-                            transition={{ duration: 3, repeat: Infinity }}
-                        >
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key={sceneIndex + '-mobile-result'}
-                                    initial={{ opacity: 0, scale: 0.5 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    exit={{ opacity: 0, scale: 0.5 }}
-                                    transition={{ duration: 0.3 }}
-                                >
-                                    <ResultIcon
-                                        className="w-8 h-8 text-[#22C55E]"
-                                        strokeWidth={1.5}
-                                    />
-                                </motion.div>
-                            </AnimatePresence>
-                        </motion.div>
-                        <AnimatePresence mode="wait">
-                            <motion.span
-                                key={sceneIndex + '-mobile-result-label'}
-                                className="text-[#94A3B8] text-sm"
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                            >
-                                {currentScene.result.label}
-                            </motion.span>
-                        </AnimatePresence>
-                    </div>
-
-                    {/* Caption mobile */}
+                    {/* Caption First - Above the flow */}
                     <AnimatePresence mode="wait">
                         <motion.p
                             key={sceneIndex + '-mobile-caption'}
-                            className="text-center text-[#64748B] text-sm mt-4"
+                            className="text-center text-[#94A3B8] text-sm leading-relaxed"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
@@ -434,14 +305,144 @@ const VexiaFlow = () => {
                         </motion.p>
                     </AnimatePresence>
 
+                    {/* Compact Horizontal Flow */}
+                    <div className="flex items-center justify-center gap-2 w-full max-w-[340px]">
+
+                        {/* Channel Node */}
+                        <div className="flex flex-col items-center gap-2 flex-shrink-0">
+                            <motion.div
+                                className="w-12 h-12 rounded-lg flex items-center justify-center"
+                                style={{
+                                    background: 'linear-gradient(135deg, rgba(10,14,24,0.95) 0%, rgba(7,10,18,0.98) 100%)',
+                                    border: '1px solid rgba(37,99,235,0.25)',
+                                }}
+                            >
+                                <AnimatePresence mode="wait">
+                                    <motion.div
+                                        key={sceneIndex + '-m-ch'}
+                                        initial={{ opacity: 0, scale: 0.8 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        exit={{ opacity: 0, scale: 0.8 }}
+                                        transition={{ duration: 0.25 }}
+                                    >
+                                        <ChannelIcon
+                                            className="w-5 h-5"
+                                            style={{ color: currentScene.channel.color }}
+                                            strokeWidth={1.5}
+                                        />
+                                    </motion.div>
+                                </AnimatePresence>
+                            </motion.div>
+                            <AnimatePresence mode="wait">
+                                <motion.span
+                                    key={sceneIndex + '-m-ch-l'}
+                                    className="text-[10px] text-[#64748B] whitespace-nowrap"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                >
+                                    {currentScene.channel.label}
+                                </motion.span>
+                            </AnimatePresence>
+                        </div>
+
+                        {/* Line Left */}
+                        <div className="relative w-6 h-px flex-shrink-0">
+                            <div
+                                className="absolute inset-0"
+                                style={{ background: 'linear-gradient(90deg, rgba(37,99,235,0.2), rgba(37,99,235,0.5))' }}
+                            />
+                            <motion.div
+                                className="absolute w-1 h-1 rounded-full bg-[#3B82F6] top-1/2 -translate-y-1/2"
+                                style={{ boxShadow: '0 0 6px rgba(59,130,246,0.8)' }}
+                                animate={{ left: ['0%', '100%'] }}
+                                transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }}
+                            />
+                        </div>
+
+                        {/* VEXIA Center */}
+                        <motion.div
+                            className="relative w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0"
+                            style={{
+                                background: 'linear-gradient(135deg, rgba(37,99,235,0.12) 0%, rgba(10,14,24,0.98) 100%)',
+                                border: '1px solid rgba(37,99,235,0.35)',
+                            }}
+                        >
+                            <span
+                                className="text-sm font-bold text-white"
+                                style={{ textShadow: '0 0 12px rgba(59,130,246,0.5)' }}
+                            >
+                                VEXIA
+                            </span>
+                            {/* Subtle pulse */}
+                            <motion.div
+                                className="absolute inset-0 rounded-xl border border-[#3B82F6]/20"
+                                animate={{ scale: [1, 1.08, 1], opacity: [0.4, 0, 0.4] }}
+                                transition={{ duration: 3, repeat: Infinity }}
+                            />
+                        </motion.div>
+
+                        {/* Line Right */}
+                        <div className="relative w-6 h-px flex-shrink-0">
+                            <div
+                                className="absolute inset-0"
+                                style={{ background: 'linear-gradient(90deg, rgba(37,99,235,0.5), rgba(34,197,94,0.4))' }}
+                            />
+                            <motion.div
+                                className="absolute w-1 h-1 rounded-full bg-[#22C55E] top-1/2 -translate-y-1/2"
+                                style={{ boxShadow: '0 0 6px rgba(34,197,94,0.8)' }}
+                                animate={{ left: ['0%', '100%'] }}
+                                transition={{ duration: 1.5, repeat: Infinity, ease: 'linear', delay: 0.75 }}
+                            />
+                        </div>
+
+                        {/* Result Node */}
+                        <div className="flex flex-col items-center gap-2 flex-shrink-0">
+                            <motion.div
+                                className="w-12 h-12 rounded-lg flex items-center justify-center"
+                                style={{
+                                    background: 'linear-gradient(135deg, rgba(10,14,24,0.95) 0%, rgba(7,10,18,0.98) 100%)',
+                                    border: '1px solid rgba(34,197,94,0.25)',
+                                }}
+                            >
+                                <AnimatePresence mode="wait">
+                                    <motion.div
+                                        key={sceneIndex + '-m-res'}
+                                        initial={{ opacity: 0, scale: 0.8 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        exit={{ opacity: 0, scale: 0.8 }}
+                                        transition={{ duration: 0.25 }}
+                                    >
+                                        <ResultIcon
+                                            className="w-5 h-5 text-[#22C55E]"
+                                            strokeWidth={1.5}
+                                        />
+                                    </motion.div>
+                                </AnimatePresence>
+                            </motion.div>
+                            <AnimatePresence mode="wait">
+                                <motion.span
+                                    key={sceneIndex + '-m-res-l'}
+                                    className="text-[10px] text-[#64748B] text-center max-w-[70px] leading-tight"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                >
+                                    {currentScene.result.label}
+                                </motion.span>
+                            </AnimatePresence>
+                        </div>
+                    </div>
+
                     {/* Scene indicators mobile */}
-                    <div className="flex justify-center gap-2 mt-4">
+                    <div className="flex justify-center gap-2">
                         {scenes.map((_, i) => (
                             <div
                                 key={i}
-                                className="w-1.5 h-1.5 rounded-full"
+                                className="w-1.5 h-1.5 rounded-full transition-all duration-300"
                                 style={{
                                     background: i === sceneIndex ? '#3B82F6' : 'rgba(59,130,246,0.2)',
+                                    boxShadow: i === sceneIndex ? '0 0 6px rgba(59,130,246,0.6)' : 'none'
                                 }}
                             />
                         ))}

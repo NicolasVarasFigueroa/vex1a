@@ -289,7 +289,21 @@ a:focus-visible {
 
 /* ===== MOBILE RESPONSIVE UTILITIES ===== */
 
+/* Global overflow prevention */
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
 @media (max-width: 768px) {
+
+    /* Prevent horizontal overflow on all sections */
+    section,
+    main,
+    div {
+        max-width: 100vw;
+    }
 
     /* Reduce heavy effects for mobile performance */
     .glow-sm {
@@ -352,12 +366,38 @@ a:focus-visible {
     button,
     a {
         min-height: 44px;
-        min-width: 44px;
     }
 
     /* Better line heights for mobile reading */
     p {
-        line-height: 1.7;
+        line-height: 1.75;
+    }
+
+    /* Improve heading legibility on mobile */
+    h1 {
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    h2 {
+        line-height: 1.25;
+        letter-spacing: -0.015em;
+    }
+
+    h3,
+    h4 {
+        line-height: 1.35;
+    }
+
+    /* Ensure proper spacing for list items */
+    li {
+        line-height: 1.6;
+    }
+
+    /* Improve small text legibility */
+    .text-xs,
+    .text-sm {
+        line-height: 1.6;
     }
 }
 
@@ -368,5 +408,37 @@ a:focus-visible {
         box-shadow:
             0 0 30px rgba(37, 99, 235, 0.2),
             0 10px 40px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* ===== REDUCED MOTION SUPPORT ===== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .animate-float,
+    .animate-glow-pulse,
+    .animate-fade-up {
+        animation: none !important;
+    }
+}
+
+/* ===== SAFE AREA INSETS FOR MOBILE ===== */
+
+@supports (padding: env(safe-area-inset-bottom)) {
+    .safe-area-bottom {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .safe-area-top {
+        padding-top: env(safe-area-inset-top);
     }
 }
