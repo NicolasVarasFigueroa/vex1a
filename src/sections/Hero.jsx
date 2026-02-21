@@ -42,7 +42,7 @@ const Hero = () => {
     };
 
     return (
-        <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-5 md:px-6">
+        <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-5 mt-5 md:px-6">
 
             <div className="relative z-10 max-w-4xl mx-auto text-center pt-16 md:pt-0">
 
@@ -54,17 +54,7 @@ const Hero = () => {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="mb-6 md:mb-10 hidden sm:block"
                 >
-                    <span className="inline-flex items-center gap-3 px-4 py-2 md:px-5 md:py-2.5 rounded-full border border-[#2563EB]/30 bg-[#2563EB]/5 backdrop-blur-sm">
-                        <motion.span
-                            className="w-2 h-2 rounded-full bg-[#38BDF8]"
-                            style={{ boxShadow: '0 0 10px rgba(56,189,248,0.8)' }}
-                            animate={{ opacity: [1, 0.4, 1] }}
-                            transition={{ duration: 2, repeat: Infinity }}
-                        />
-                        <span className="text-xs font-medium tracking-wide text-[#38BDF8] uppercase">
-                            Estudio de automatización
-                        </span>
-                    </span>
+                  
                 </motion.div>
 
                 {/* Main Title - Human centered */}
