@@ -15,9 +15,8 @@ import PlanesSection from "./sections/Planes";
 // Pages
 import PlanesPage from "./pages/Planes";
 import Nosotros from "./pages/Nosotros";
-import Soluciones from "./pages/solution"; 
 import SectoresPage from "./pages/Sectores";
-
+import Service from "./pages/Service";
 
 function HomePage() {
   return (
@@ -46,8 +45,8 @@ function App() {
               {/* Pages */}
               <Route path="/planes" element={<PlanesPage />} />
               <Route path="/nosotros" element={<Nosotros />} />
-              <Route path="/solution" element={<Soluciones />} />
               <Route path="/sectores" element={<SectoresPage />} />
+              <Route path="/service" element={<Service />} />
 
             </Routes>
           </main>

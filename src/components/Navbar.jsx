@@ -18,10 +18,11 @@ const Navbar = () => {
 
   const links = [
     { name: "Inicio", href: "/" },
-    { name: "Soluciones", href: "/solution" },
-    { name: "Sectores", href: "/sectores" }, // ✅ ahora es page
+     { name: "Servicios", href: "/service" },
+    { name: "Sectores", href: "/sectores" },
     { name: "Planes", href: "/planes" },
     { name: "Nosotros", href: "/nosotros" },
+   
   ];
 
   const goTo = (path) => {

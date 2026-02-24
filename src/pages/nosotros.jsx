@@ -91,9 +91,9 @@ const Nosotros = () => {
               className="text-[#3B82F6]"
               style={{ textShadow: "0 0 20px rgba(56,189,248,0.35)" }}
             >
-              ingenieros informáticos
+             una empresa
             </span>{" "}
-            enfocados en entregar soluciones reales.
+            enfocado en entregar soluciones reales.
           </motion.h1>
 
           <motion.p
@@ -103,7 +103,7 @@ const Nosotros = () => {
             variants={fadeUp}
             custom={0.14}
           >
-            Diseñamos e implementamos automatización operativa, agentes IA y desarrollo web
+            Diseñamos e implementamos automatización operativa, agentes IA, desarrollo web y BI / Analítica 
             para que tu negocio opere sin fricción: menos tareas manuales, menos errores y más control.
           </motion.p>
 

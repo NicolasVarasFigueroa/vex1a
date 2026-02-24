@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-
+import { Link } from "react-router-dom";
 const AnimatedCounter = ({ value, suffix = '', delay = 0 }) => {
     const [count, setCount] = useState(0);
     const numericValue = parseInt(value.replace(/\D/g, ''));
@@ -115,6 +115,7 @@ const Hero = () => {
                         }}
                         whileTap={{ scale: 0.98 }}
                     >
+                        <Link to="/service">
                         <span className="relative z-10">Quiero saber cómo me ayudan</span>
                         <motion.div
                             className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent"
@@ -122,6 +123,7 @@ const Hero = () => {
                             whileHover={{ x: '100%' }}
                             transition={{ duration: 0.5 }}
                         />
+                        </Link>
                     </motion.button>
 
                     <motion.button
