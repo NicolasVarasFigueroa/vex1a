@@ -9,8 +9,7 @@ import Hero from "./sections/Hero";
 import EnQueAyudamos from "./sections/EnQueAyudamos";
 import VexiaFlow from "./sections/VexiaFlow";
 import Resultados from "./sections/Resultados";
-import SectoresSection from "./sections/Sectores";
-import PlanesSection from "./sections/Planes";
+
 
 // Pages
 import PlanesPage from "./pages/Planes";
