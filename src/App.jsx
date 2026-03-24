@@ -12,10 +12,10 @@ import Resultados from "./sections/Resultados";
 
 
 // Pages
-import PlanesPage from "./pages/Planes";
-import Nosotros from "./pages/Nosotros";
-import SectoresPage from "./pages/Sectores";
-import Service from "./pages/Service";
+import PlanesPage from "./pages/planes";
+import Nosotros from "./pages/nosotros";
+import SectoresPage from "./pages/sectores";
+import Service from "./pages/service";
 
 function HomePage() {
   return (
