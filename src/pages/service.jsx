@@ -13,55 +13,70 @@ import {
 const Service = () => {
   const servicios = [
     {
-      icon: Globe,
-      tag: "Desarrollo Web",
-      title: "Sitios web y sistemas a medida",
-      description:
-        "Diseñamos y desarrollamos páginas web corporativas, landing pages y sistemas funcionales para mejorar la presencia digital y la operación de tu empresa.",
-      items: [
-        "Landing pages y sitios corporativos",
-        "Webs funcionales con panel de administración",
-        "Formularios, WhatsApp y correo integrados",
-        "Diseño responsive (móvil / tablet / desktop)",
-        "Dominio + hosting + SSL (según plan)",
-      ],
-      cta: "Cotizar desarrollo web",
-      waText: "Hola Vexia, quiero cotizar un desarrollo web para mi empresa",
-      featured: false,
-    },
-    {
       icon: Workflow,
-      tag: "Automatización",
-      title: "Automatización de procesos operativos",
+      tag: "Automatización e IA",
+      title: "Procesos en Piloto Automático",
       description:
-        "Conectamos herramientas y automatizamos flujos para reducir tareas manuales, errores y tiempos de respuesta en tu operación diaria.",
+        "Integramos tus herramientas para eliminar el trabajo manual. Tu operación lista para escalar sin trabas.",
       items: [
-        "Automatización de tareas repetitivas",
-        "Flujos entre formularios, correo, planillas y CRM",
-        "Notificaciones automáticas y seguimiento",
-        "Validaciones y reglas de negocio",
-        "Procesos internos más rápidos y ordenados",
+        "Gestión y ventas con IA",
+        "CRM y WhatsApp integrados 100%",
+        "Reducción directa de costos",
       ],
       cta: "Quiero automatizar mi empresa",
-      waText: "Hola Vexia, quiero automatizar procesos en mi empresa",
+      waText: "Hola Vexia, quiero automatizar mis procesos",
       featured: true,
+      theme: {
+        gradient: "from-emerald-400 to-teal-500",
+        shadow: "rgba(16, 185, 129, 0.15)",
+        text: "text-emerald-400",
+        bgIcon: "bg-emerald-500/10",
+        borderIcon: "border-emerald-500/20",
+      }
     },
     {
       icon: BarChart3,
       tag: "BI / Analítica",
-      title: "Dashboards e indicadores para decisiones",
+      title: "Control Total con Datos Reales",
       description:
-        "Convertimos tus datos en información útil con paneles visuales, reportes y KPIs para que tomes decisiones con mayor claridad y control.",
+        "Dashboards precisos enfocados en tu rentabilidad. Deja de adivinar y dirige con visión clara.",
       items: [
-        "Dashboards de ventas, operación y gestión",
-        "Consolidación de datos de distintas fuentes",
-        "KPIs personalizados por área",
-        "Reportes visuales y seguimiento",
-        "Base para decisiones con datos reales",
+        "Métricas clave de un vistazo",
+        "Cruce automático de sistemas",
+        "Decisiones ágiles basadas en hechos",
       ],
-      cta: "Quiero un dashboard",
-      waText: "Hola Vexia, quiero una solución BI / dashboard para mi empresa",
+      cta: "Quiero medir mi negocio",
+      waText: "Hola Vexia, necesito tableros de control para mi empresa",
       featured: false,
+      theme: {
+        gradient: "from-blue-400 to-cyan-500",
+        shadow: "rgba(56, 189, 248, 0.15)",
+        text: "text-blue-400",
+        bgIcon: "bg-blue-500/10",
+        borderIcon: "border-blue-500/20",
+      }
+    },
+    {
+      icon: Globe,
+      tag: "Desarrollo Web",
+      title: "Plataformas Web Elevadas",
+      description:
+        "Sitios web rápidos, modernos y optimizados para captar leads y agilizar tu operación diaria.",
+      items: [
+        "Alta velocidad garantizada",
+        "Formularios listos para CRM",
+        "Diseño Premium adaptable",
+      ],
+      cta: "Cotizar plataforma web",
+      waText: "Hola Vexia, quiero cotizar un sitio web para mi empresa",
+      featured: false,
+      theme: {
+        gradient: "from-fuchsia-500 to-purple-600",
+        shadow: "rgba(168, 85, 247, 0.15)",
+        text: "text-purple-400",
+        bgIcon: "bg-purple-500/10",
+        borderIcon: "border-purple-500/20",
+      }
     },
   ];
 
@@ -69,22 +84,22 @@ const Service = () => {
     {
       icon: Zap,
       title: "Diagnóstico",
-      desc: "Entendemos tu necesidad, tu flujo actual y el objetivo de negocio.",
+      desc: "Analizamos tu operación al detalle para encontrar cuellos de botella.",
     },
     {
       icon: Workflow,
       title: "Propuesta",
-      desc: "Definimos alcance, entregables, tiempos y una solución clara.",
+      desc: "Diseñamos la solución exacta, con tiempos y costos transparentes.",
     },
     {
       icon: Database,
       title: "Implementación",
-      desc: "Construimos, integramos, probamos y dejamos funcionando.",
+      desc: "Desarrollamos e integramos todo. Listo para usar.",
     },
     {
       icon: Shield,
       title: "Soporte",
-      desc: "Acompañamiento, mejoras y mantenimiento opcional.",
+      desc: "Te acompañamos mes a mes para asegurar que todo funcione perfecto.",
     },
   ];
 
@@ -116,18 +131,17 @@ const Service = () => {
             </span>
 
             <h1 className="mt-6 text-4xl md:text-6xl font-bold tracking-tight leading-tight">
-              Servicios para impulsar tu empresa con{" "}
+              Tecnología útil para{" "}
               <span
                 className="text-[#3B82F6]"
                 style={{ textShadow: "0 0 20px rgba(56,189,248,0.35)" }}
               >
-                tecnología útil
+                escalar tu empresa
               </span>
             </h1>
 
-            <p className="mt-5 text-[#94A3B8] text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-              En VEXIA combinamos desarrollo web, automatización y BI para
-              ayudarte a vender más, operar mejor y tomar decisiones con datos.
+            <p className="mt-5 text-[var(--vexia-text-secondary)] text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+              Combinamos Procesos de IA, Inteligencia de Datos y Desarrollo a medida para que operes sin fricciones y recuperes tu tiempo libre.
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -156,82 +170,90 @@ const Service = () => {
       </section>
 
       {/* Servicios */}
-      <section className="pb-14 md:pb-20">
+      <section className="pb-14 md:pb-24">
         <div className="max-w-6xl mx-auto px-5 md:px-6">
-          <div className="grid gap-5 lg:grid-cols-3">
+          <div className="grid gap-6 lg:grid-cols-3">
             {servicios.map((servicio, index) => {
               const Icon = servicio.icon;
               return (
                 <motion.div
                   key={servicio.title}
-                  initial={{ opacity: 0, y: 22 }}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.55, delay: index * 0.08 }}
-                  className="group"
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="group h-full"
                 >
-                  <div
-                    className="relative h-full rounded-2xl p-6 border overflow-hidden"
+                  <motion.div
+                    className={`relative flex flex-col h-full rounded-3xl p-6 md:p-8 border overflow-hidden transition-all duration-500 bg-[#070A12]/80 backdrop-blur-xl group-hover:-translate-y-2`}
                     style={{
-                      background: servicio.featured
-                        ? "linear-gradient(135deg, rgba(13,18,32,0.98) 0%, rgba(7,10,18,0.99) 100%)"
-                        : "linear-gradient(135deg, rgba(10,14,24,0.95) 0%, rgba(7,10,18,0.98) 100%)",
                       borderColor: servicio.featured
-                        ? "rgba(37,99,235,0.22)"
-                        : "rgba(255,255,255,0.08)",
+                        ? "rgba(16, 185, 129, 0.3)"
+                        : "rgba(255,255,255,0.05)",
+                      boxShadow: `0 0 30px ${servicio.theme.shadow}`,
+                    }}
+                    whileHover={{
+                      boxShadow: `0 20px 40px ${servicio.theme.shadow}`,
                     }}
                   >
+                    {/* Glowing background orb for the card */}
+                    <div className={`absolute -top-24 -right-24 w-48 h-48 rounded-full bg-gradient-to-br ${servicio.theme.gradient} opacity-0 group-hover:opacity-10 blur-3xl transition-opacity duration-500 pointer-events-none`} />
+
                     {servicio.featured && (
-                      <>
-                        <div className="absolute top-0 left-8 right-8 h-[2px] bg-gradient-to-r from-transparent via-[#38BDF8]/50 to-transparent" />
-                        <div className="absolute top-4 right-4">
-                          <span className="px-3 py-1 rounded-full text-[10px] uppercase font-bold tracking-wider bg-gradient-to-r from-[#2563EB] to-[#3B82F6] text-white">
-                            Destacado
-                          </span>
-                        </div>
-                      </>
+                      <div className="absolute top-4 right-4 z-10">
+                        <span className={`px-3 py-1 rounded-full text-[10px] md:text-xs uppercase font-bold tracking-wider bg-gradient-to-r ${servicio.theme.gradient} text-white shadow-lg`}>
+                          Recomendado
+                        </span>
+                      </div>
                     )}
 
-                    <div className="w-12 h-12 rounded-xl flex items-center justify-center border border-[#2563EB]/20 bg-[#2563EB]/10">
-                      <Icon className="w-5 h-5 text-[#3B82F6]" />
-                    </div>
+                    {/* Icon/Visual side */}
+                    <motion.div 
+                        className={`w-16 h-16 rounded-2xl flex items-center justify-center border ${servicio.theme.borderIcon} ${servicio.theme.bgIcon} mb-6 relative z-10`}
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                    >
+                      <Icon className={`w-8 h-8 ${servicio.theme.text}`} strokeWidth={1.5} />
+                    </motion.div>
 
-                    <p className="mt-4 text-xs uppercase tracking-[0.15em] text-[#38BDF8]/80 font-medium">
+                    <p className={`text-xs uppercase tracking-[0.2em] ${servicio.theme.text} font-bold mb-3`}>
                       {servicio.tag}
                     </p>
 
-                    <h3 className="mt-2 text-xl font-bold leading-snug group-hover:text-[#38BDF8] transition-colors">
+                    <h3 className="text-xl md:text-2xl font-bold leading-tight text-white mb-4 relative z-10 transition-colors duration-300">
                       {servicio.title}
                     </h3>
 
-                    <p className="mt-3 text-sm text-[#94A3B8] leading-relaxed">
+                    <p className="text-sm md:text-base text-[var(--vexia-text-secondary)] leading-relaxed mb-8 flex-grow relative z-10">
                       {servicio.description}
                     </p>
 
-                    <ul className="mt-5 space-y-2.5">
+                    <ul className="flex flex-col gap-3 mb-8 relative z-10">
                       {servicio.items.map((item) => (
                         <li
                           key={item}
-                          className="flex items-start gap-2 text-sm text-[#C7D2E0]"
+                          className="flex items-start gap-2.5 text-sm text-[#D4D4D8] font-medium bg-white/[0.02] border border-white/5 rounded-xl px-3 py-2"
                         >
-                          <CheckCircle2 className="w-4 h-4 text-[#3B82F6] mt-0.5 shrink-0" />
+                          <CheckCircle2 className={`w-4 h-4 ${servicio.theme.text} shrink-0 mt-0.5`} />
                           <span>{item}</span>
                         </li>
                       ))}
                     </ul>
 
-                    <a
-                      href={`https://wa.me/569XXXXXXXX?text=${encodeURIComponent(
-                        servicio.waText
-                      )}`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#38BDF8] hover:text-white transition-colors"
-                    >
-                      {servicio.cta}
-                      <ArrowRight className="w-4 h-4" />
-                    </a>
-                  </div>
+                    <div className="mt-auto relative z-10 pt-4 border-t border-white/5">
+                      <a
+                        href={`https://wa.me/569XXXXXXXX?text=${encodeURIComponent(
+                          servicio.waText
+                        )}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={`inline-flex items-center gap-2 text-sm font-semibold ${servicio.theme.text} hover:text-white transition-colors group/btn`}
+                      >
+                        {servicio.cta}
+                        <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                      </a>
+                    </div>
+                  </motion.div>
                 </motion.div>
               );
             })}
@@ -254,11 +276,10 @@ const Service = () => {
                 Proceso de trabajo
               </p>
               <h2 className="mt-3 text-2xl md:text-3xl font-bold">
-                Cómo implementamos una solución en tu empresa
+                Tu proyecto listo en 4 pasos
               </h2>
-              <p className="mt-3 text-[#94A3B8]">
-                Método claro y ordenado para entregar valor rápido, con buena
-                comunicación y resultados visibles.
+              <p className="mt-3 text-[var(--vexia-text-secondary)]">
+                Método ágil y transparente para entregar valor rápido sin interrumpir tu operación.
               </p>
             </div>
 
@@ -295,12 +316,11 @@ const Service = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold">
-              ¿Quieres una solución a medida para tu negocio?
+            <h2 className="text-2xl md:text-3xl font-bold text-white">
+              ¿Listo para escalar tu empresa?
             </h2>
-            <p className="mt-3 text-[#94A3B8] max-w-2xl mx-auto">
-              Cuéntanos tu necesidad y te orientamos con la mejor opción:
-              desarrollo web, automatización, BI o una combinación.
+            <p className="mt-3 text-[var(--vexia-text-secondary)] max-w-2xl mx-auto">
+              Hablemos hoy. Evaluaremos tu caso sin compromiso y trazaremos el plan exacto para tu crecimiento.
             </p>
 
             <div className="mt-6 flex flex-wrap justify-center gap-3">

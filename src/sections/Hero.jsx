@@ -64,79 +64,56 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
                 >
-                    <span className="text-white">Te ayudamos a que </span>
+                    <span className="text-white">Escala tu empresa con </span>
                     <br className="hidden sm:block" />
-                    <span className="text-white">tu negocio </span>
+                    <span className="text-white">Sistemas </span>
                     <motion.span
-                        className="text-[#3B82F6] inline-block"
+                        className="text-white inline-block"
                         style={{
-                            textShadow: '0 0 20px rgba(56,189,248,0.5), 0 0 40px rgba(37,99,235,0.3)'
+                            textShadow: '0 0 15px rgba(255,255,255,0.3), 0 0 30px rgba(255,255,255,0.1)'
                         }}
                         animate={{
                             textShadow: [
-                                '0 0 15px rgba(56,189,248,0.4), 0 0 30px rgba(37,99,235,0.2)',
-                                '0 0 25px rgba(56,189,248,0.6), 0 0 50px rgba(37,99,235,0.3)',
-                                '0 0 15px rgba(56,189,248,0.4), 0 0 30px rgba(37,99,235,0.2)'
+                                '0 0 10px rgba(255,255,255,0.2), 0 0 20px rgba(255,255,255,0.1)',
+                                '0 0 20px rgba(255,255,255,0.4), 0 0 40px rgba(255,255,255,0.2)',
+                                '0 0 10px rgba(255,255,255,0.2), 0 0 20px rgba(255,255,255,0.1)'
                             ]
                         }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                     >
-                        funcione solo
+                        Inteligentes
                     </motion.span>
-                    <span className="text-[#64748B]">.</span>
+                    <span className="text-[#3B82F6]">.</span>
                 </motion.h1>
 
                 {/* Subtitle - Benefit focused */}
                 <motion.p
-                    className="mt-5 md:mt-8 text-base sm:text-lg md:text-xl text-[#94A3B8] max-w-xl md:max-w-2xl mx-auto leading-relaxed px-2 sm:px-0"
+                    className="mt-5 md:mt-8 text-base sm:text-lg md:text-xl text-[var(--vexia-text-secondary)] max-w-xl md:max-w-2xl mx-auto leading-relaxed px-2 sm:px-0"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
                 >
-                    Diseñamos, implementamos y mantenemos tu operación automática.
-                    <span className="text-white font-medium"> Tú te enfocas en crecer, nosotros en que todo fluya.</span>
+                    Desarrollamos asistentes de IA, automatizamos tareas repetitivas y creamos plataformas web de alto rendimiento.
+                    <br className="hidden sm:block" />
+                    <span className="text-white font-medium"> Multiplica tu rentabilidad sin contratar más personal.</span>
                 </motion.p>
 
                 {/* CTAs */}
                 <motion.div
-                    className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-8 md:mt-12 w-full sm:w-auto px-2 sm:px-0"
+                    className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 md:mt-12 w-full sm:w-auto px-4 sm:px-0"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.7 }}
                 >
-                    <motion.button
-                        className="relative w-full sm:w-auto rounded-full bg-gradient-to-r from-[#2563EB] to-[#3B82F6] px-6 sm:px-8 py-4 text-base sm:text-sm font-semibold text-white overflow-hidden min-h-[56px] sm:min-h-0"
-                        style={{
-                            boxShadow: '0 4px 20px rgba(37, 99, 235, 0.4), 0 0 40px rgba(37, 99, 235, 0.2), inset 0 1px 0 rgba(255,255,255,0.15)'
-                        }}
-                        whileHover={{
-                            scale: 1.03,
-                            boxShadow: '0 8px 40px rgba(37, 99, 235, 0.5), 0 0 60px rgba(37, 99, 235, 0.3), inset 0 1px 0 rgba(255,255,255,0.2)'
-                        }}
-                        whileTap={{ scale: 0.98 }}
-                    >
-                        <Link to="/service">
-                        <span className="relative z-10">Quiero saber cómo me ayudan</span>
-                        <motion.div
-                            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent"
-                            initial={{ x: '-100%' }}
-                            whileHover={{ x: '100%' }}
-                            transition={{ duration: 0.5 }}
-                        />
-                        </Link>
-                    </motion.button>
+                    <Link to="/service" className="w-full sm:w-auto">
+                        <button className="btn-primary-ai w-full sm:w-auto min-h-[56px] sm:min-h-0 text-base sm:text-sm">
+                            <span className="relative z-10">Agendar Consultoría Gratuita</span>
+                        </button>
+                    </Link>
 
-                    <motion.button
-                        className="w-full sm:w-auto rounded-full border border-[#2563EB]/40 bg-transparent px-6 sm:px-8 py-4 text-base sm:text-sm font-medium text-white min-h-[56px] sm:min-h-0"
-                        whileHover={{
-                            borderColor: '#2563EB',
-                            backgroundColor: 'rgba(37,99,235,0.08)',
-                            boxShadow: '0 0 30px rgba(37,99,235,0.15)'
-                        }}
-                        whileTap={{ scale: 0.98 }}
-                    >
-                        Ver ejemplos reales
-                    </motion.button>
+                    <button className="btn-secondary-ai w-full sm:w-auto min-h-[56px] sm:min-h-0 text-base sm:text-sm">
+                        Ver Casos de Éxito
+                    </button>
                 </motion.div>
 
                 {/* Benefits - Human language */}
@@ -149,20 +126,10 @@ const Hero = () => {
                     {benefits.map((benefit, i) => (
                         <motion.div
                             key={i}
-                            className="relative rounded-xl p-4 sm:p-6 backdrop-blur-sm overflow-hidden text-left"
-                            style={{
-                                background: 'linear-gradient(135deg, rgba(10,14,24,0.9) 0%, rgba(7,10,18,0.95) 100%)',
-                                border: '1px solid rgba(37,99,235,0.12)',
-                                boxShadow: '0 4px 20px rgba(0,0,0,0.3)'
-                            }}
+                            className="card-system p-5 sm:p-7 text-left flex flex-col justify-center"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 1 + i * 0.15 }}
-                            whileHover={{
-                                y: -4,
-                                borderColor: 'rgba(37,99,235,0.3)',
-                                boxShadow: '0 15px 50px rgba(0,0,0,0.5), 0 0 30px rgba(37,99,235,0.1)'
-                            }}
                         >
                             <motion.div
                                 className="text-2xl sm:text-3xl font-bold text-[#3B82F6] mb-1 sm:mb-2"
@@ -199,10 +166,7 @@ const Hero = () => {
             </motion.div>
 
             {/* Section divider */}
-            <div
-                className="absolute bottom-0 left-0 right-0 h-px"
-                style={{ background: 'linear-gradient(90deg, transparent, rgba(37,99,235,0.4), transparent)' }}
-            />
+            <div className="absolute bottom-0 left-0 right-0 section-line" />
         </section>
     );
 };

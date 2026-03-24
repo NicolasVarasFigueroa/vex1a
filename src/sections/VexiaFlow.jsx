@@ -19,38 +19,38 @@ const VexiaFlow = () => {
     const scenes = [
         {
             channel: { icon: MessageCircle, label: 'WhatsApp', color: '#25D366' },
-            result: { icon: ShoppingBag, label: 'Pedido confirmado' },
-            caption: 'Un cliente escribe a las 3am'
+            result: { icon: ShoppingBag, label: 'Venta cerrada' },
+            caption: 'Cierras ventas a las 3 AM sin mover un dedo.'
         },
         {
             channel: { icon: MessageCircle, label: 'WhatsApp', color: '#25D366' },
-            result: { icon: CalendarCheck, label: 'Reserva confirmada' },
-            caption: 'Sin llamadas. Sin errores.'
+            result: { icon: CalendarCheck, label: 'Reserva lista' },
+            caption: 'Reservas automáticas. Cero errores humanos.'
         },
         {
             channel: { icon: MessageCircle, label: 'WhatsApp', color: '#25D366' },
-            result: { icon: Calendar, label: 'Cita agendada' },
-            caption: 'Agenda sola.'
+            result: { icon: Calendar, label: 'Cita en agenda' },
+            caption: 'Tu calendario se llena por sí solo.'
         },
         {
             channel: { icon: MessageCircle, label: 'WhatsApp', color: '#25D366' },
-            result: { icon: Wallet, label: 'Pago recordado' },
-            caption: 'Cobros sin perseguir clientes.'
+            result: { icon: Wallet, label: 'Pago recibido' },
+            caption: 'Cobros en piloto automático.'
         },
         {
             channel: { icon: Globe, label: 'Web / Ads', color: '#3B82F6' },
             result: { icon: UserCheck, label: 'Lead calificado' },
-            caption: 'Solo llegan los que importan.'
+            caption: 'Tu equipo de ventas solo atiende a los que importan.'
         },
         {
             channel: { icon: MessageCircle, label: 'WhatsApp', color: '#25D366' },
-            result: { icon: RefreshCw, label: 'Seguimiento automático' },
-            caption: 'Clientes que vuelven.'
+            result: { icon: RefreshCw, label: 'Follow up activo' },
+            caption: 'Haz que tus clientes regresen sin perseguirlos.'
         },
         {
-            channel: { icon: Zap, label: 'Cualquier canal', color: '#38BDF8' },
-            result: { icon: CheckCircle, label: 'Operación funcionando' },
-            caption: 'Mientras duermes.'
+            channel: { icon: Zap, label: 'Omnicanal', color: '#38BDF8' },
+            result: { icon: CheckCircle, label: 'Sistema escalando' },
+            caption: 'Tu negocio crece mientras duermes.'
         },
     ];
 
@@ -84,12 +84,12 @@ const VexiaFlow = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <span className="text-white">Mientras duermes, </span>
+                    <span className="text-white">Tú te enfocas en liderar, </span>
                     <span
                         className="text-[#3B82F6]"
-                        style={{ textShadow: '0 0 30px rgba(59,130,246,0.5)' }}
+                        style={{ textShadow: '0 0 20px rgba(59,130,246,0.3)' }}
                     >
-                        VEXIA trabaja.
+                        VEXIA opera el día a día.
                     </span>
                 </motion.h2>
 
@@ -99,11 +99,7 @@ const VexiaFlow = () => {
                     {/* Channel Node */}
                     <div className="flex flex-col items-center gap-3">
                         <motion.div
-                            className="relative w-20 h-20 lg:w-24 lg:h-24 rounded-2xl flex items-center justify-center"
-                            style={{
-                                background: 'linear-gradient(135deg, rgba(10,14,24,0.95) 0%, rgba(7,10,18,0.98) 100%)',
-                                border: '1px solid rgba(37,99,235,0.2)',
-                            }}
+                            className="relative w-20 h-20 lg:w-24 lg:h-24 rounded-2xl flex items-center justify-center card-system"
                             animate={{
                                 boxShadow: [
                                     `0 0 20px ${currentScene.channel.color}20`,
@@ -161,11 +157,7 @@ const VexiaFlow = () => {
 
                     {/* VEXIA Core */}
                     <motion.div
-                        className="relative w-28 h-28 lg:w-36 lg:h-36 rounded-3xl flex items-center justify-center"
-                        style={{
-                            background: 'linear-gradient(135deg, rgba(37,99,235,0.15) 0%, rgba(10,14,24,0.98) 100%)',
-                            border: '1px solid rgba(37,99,235,0.4)',
-                        }}
+                        className="relative w-28 h-28 lg:w-36 lg:h-36 rounded-3xl flex items-center justify-center card-system"
                         animate={{
                             boxShadow: [
                                 '0 0 30px rgba(37,99,235,0.2), 0 0 60px rgba(37,99,235,0.1)',
@@ -212,11 +204,7 @@ const VexiaFlow = () => {
                     {/* Result Node */}
                     <div className="flex flex-col items-center gap-3">
                         <motion.div
-                            className="relative w-20 h-20 lg:w-24 lg:h-24 rounded-2xl flex items-center justify-center"
-                            style={{
-                                background: 'linear-gradient(135deg, rgba(10,14,24,0.95) 0%, rgba(7,10,18,0.98) 100%)',
-                                border: '1px solid rgba(34,197,94,0.2)',
-                            }}
+                            className="relative w-20 h-20 lg:w-24 lg:h-24 rounded-2xl flex items-center justify-center card-system"
                             animate={{
                                 boxShadow: [
                                     '0 0 20px rgba(34,197,94,0.15)',
@@ -311,11 +299,7 @@ const VexiaFlow = () => {
                         {/* Channel Node */}
                         <div className="flex flex-col items-center gap-2 flex-shrink-0">
                             <motion.div
-                                className="w-12 h-12 rounded-lg flex items-center justify-center"
-                                style={{
-                                    background: 'linear-gradient(135deg, rgba(10,14,24,0.95) 0%, rgba(7,10,18,0.98) 100%)',
-                                    border: '1px solid rgba(37,99,235,0.25)',
-                                }}
+                                className="w-12 h-12 rounded-lg flex items-center justify-center card-system"
                             >
                                 <AnimatePresence mode="wait">
                                     <motion.div
@@ -362,11 +346,7 @@ const VexiaFlow = () => {
 
                         {/* VEXIA Center */}
                         <motion.div
-                            className="relative w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0"
-                            style={{
-                                background: 'linear-gradient(135deg, rgba(37,99,235,0.12) 0%, rgba(10,14,24,0.98) 100%)',
-                                border: '1px solid rgba(37,99,235,0.35)',
-                            }}
+                            className="relative w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0 card-system"
                         >
                             <span
                                 className="text-sm font-bold text-white"
@@ -399,11 +379,7 @@ const VexiaFlow = () => {
                         {/* Result Node */}
                         <div className="flex flex-col items-center gap-2 flex-shrink-0">
                             <motion.div
-                                className="w-12 h-12 rounded-lg flex items-center justify-center"
-                                style={{
-                                    background: 'linear-gradient(135deg, rgba(10,14,24,0.95) 0%, rgba(7,10,18,0.98) 100%)',
-                                    border: '1px solid rgba(34,197,94,0.25)',
-                                }}
+                                className="w-12 h-12 rounded-lg flex items-center justify-center card-system"
                             >
                                 <AnimatePresence mode="wait">
                                     <motion.div
@@ -451,10 +427,7 @@ const VexiaFlow = () => {
             </div>
 
             {/* Section divider */}
-            <div
-                className="absolute bottom-0 left-0 right-0 h-px"
-                style={{ background: 'linear-gradient(90deg, transparent, rgba(37,99,235,0.3), transparent)' }}
-            />
+            <div className="absolute bottom-0 left-0 right-0 section-line" />
         </section>
     );
 };

@@ -28,20 +28,21 @@ const Navbar = () => {
   const goTo = (path) => {
     setMobileOpen(false);
     navigate(path);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <>
       <motion.nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled ? "h-24" : "h-28"
+          scrolled ? "h-20" : "h-28"
         }`}
         style={
           scrolled
             ? {
-                backgroundColor: "rgba(5,6,10,0.9)",
+                backgroundColor: "var(--vexia-bg-elevated)",
                 backdropFilter: "blur(20px)",
-                borderBottom: "1px solid rgba(37,99,235,0.1)",
+                borderBottom: "1px solid var(--vexia-border)",
               }
             : { backgroundColor: "transparent" }
         }
@@ -94,24 +95,12 @@ const Navbar = () => {
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3 shrink-0">
-            <motion.button
-              className="text-xs uppercase tracking-wide font-semibold text-white px-5 py-2.5 rounded-full"
-              style={{
-                background: "linear-gradient(135deg, #2563EB, #3B82F6)",
-                boxShadow: "0 4px 15px rgba(37,99,235,0.3)",
-              }}
-              whileHover={{
-                scale: 1.03,
-                boxShadow: "0 6px 25px rgba(37,99,235,0.4)",
-              }}
-              whileTap={{ scale: 0.98 }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              onClick={() => goTo("/planes")} // opcional: que el CTA vaya a planes
+            <button
+              className="btn-primary-ai text-xs uppercase tracking-wide px-5 py-2.5"
+              onClick={() => goTo("/planes")}
             >
               Empezar ahora
-            </motion.button>
+            </button>
 
             <motion.a
               href="https://wa.me/569XXXXXXXX?text=Hola%20Vexia,%20quiero%20cotizar%20una%20automatizaci%C3%B3n"
@@ -149,7 +138,7 @@ const Navbar = () => {
         {mobileOpen && (
           <motion.div
             className="fixed inset-0 z-40 md:hidden"
-            style={{ backgroundColor: "rgba(5,6,10,0.98)", backdropFilter: "blur(20px)" }}
+            style={{ backgroundColor: "var(--vexia-bg-elevated)", backdropFilter: "blur(20px)" }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -172,19 +161,12 @@ const Navbar = () => {
                 </motion.div>
               ))}
 
-              <motion.button
-                className="mt-6 text-base font-semibold text-white px-10 py-4 rounded-full min-h-[56px] w-full max-w-xs"
-                style={{
-                  background: "linear-gradient(135deg, #2563EB, #3B82F6)",
-                  boxShadow: "0 4px 20px rgba(37,99,235,0.3)",
-                }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
+              <button
+                className="btn-primary-ai mt-6 text-base font-semibold w-full max-w-xs"
                 onClick={() => goTo("/planes")}
               >
                 Empezar ahora
-              </motion.button>
+              </button>
             </div>
           </motion.div>
         )}

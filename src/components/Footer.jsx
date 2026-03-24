@@ -10,10 +10,10 @@ import faceIcon from "../assets/logo-face.webp";
 const Footer = () => {
   return (
     <footer
-      className="relative py-10 md:py-14"
+      className="relative py-10 md:py-14 border-t"
       style={{
-        backgroundColor: "#05060A",
-        borderTop: "1px solid rgba(37,99,235,0.1)",
+        backgroundColor: "var(--vexia-bg)",
+        borderColor: "var(--vexia-border)",
       }}
     >
       <div className="max-w-5xl mx-auto px-5 md:px-6">
@@ -103,7 +103,7 @@ const Footer = () => {
 
               <li>
                 <a
-                  href="https://linkedin.com/company/tu_empresa"
+                  href="https://www.linkedin.com/in/vexia-cl"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-2 text-sm text-[#94A3B8] hover:text-[#38BDF8] transition-colors"

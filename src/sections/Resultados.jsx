@@ -45,54 +45,51 @@ const Resultados = () => {
         {
             value: '300',
             suffix: '+',
-            titulo: 'Horas al mes de vuelta',
-            descripcion: 'Tiempo que tu equipo recupera para enfocarse en lo importante',
+            titulo: 'Horas devueltas',
+            descripcion: 'Tu equipo enfocado en crecer.',
             icon: Clock
         },
         {
             value: '80',
             suffix: '%',
-            titulo: 'Menos tareas manuales',
-            descripcion: 'Esas tareas repetitivas que nadie quiere hacer, ahora se hacen solas',
+            titulo: 'Carga manual eliminada',
+            descripcion: 'Las tareas aburridas se hacen solas.',
             icon: TrendingDown
         },
         {
             value: '24',
             suffix: '/7',
-            titulo: 'Tu operación nunca para',
-            descripcion: 'Mientras duermes, todo sigue funcionando como debe',
+            titulo: 'Operación continua',
+            descripcion: 'Todo funciona mientras duermes.',
             icon: Moon
         },
         {
             value: '0',
             suffix: '',
             prefix: '→',
-            titulo: 'Cero estrés operativo',
-            descripcion: 'No más apagar incendios ni perseguir tareas pendientes',
+            titulo: 'Errores humanos',
+            descripcion: 'Cero estrés. No más apagar incendios.',
             icon: Heart
         },
     ];
 
     const antes = [
-        'Tu equipo haciendo tareas repetitivas',
-        'Clientes esperando respuestas',
-        'Datos en distintos lugares',
-        'Dependiendo de que alguien esté disponible',
+        'Procesos manuales lentos',
+        'Ventas perdidas por demoras',
+        'Desorden en Excels',
+        'Dependencia del personal',
     ];
 
     const despues = [
-        'Tu equipo enfocado en lo que importa',
-        'Respuestas instantáneas, siempre',
-        'Todo sincronizado automáticamente',
-        'La operación funciona aunque no estés',
+        'Sistemas 100% integrados',
+        'IA vendiendo 24/7',
+        'Control total en tiempo real',
+        'Tu negocio escala solo',
     ];
 
     return (
         <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
-            <div
-                className="absolute top-0 left-0 right-0 h-px"
-                style={{ background: 'linear-gradient(90deg, transparent, rgba(37,99,235,0.3), transparent)' }}
-            />
+            <div className="absolute top-0 left-0 right-0 section-line" />
 
             <div className="relative z-10 max-w-5xl mx-auto px-5 md:px-6">
                 {/* Header */}
@@ -103,19 +100,16 @@ const Resultados = () => {
                     viewport={{ once: true }}
                 >
                     <span className="inline-block text-xs font-medium tracking-[0.2em] text-[#38BDF8] uppercase mb-6">
-                        Lo que tu negocio siente
+                        El Impacto VEXIA
                     </span>
                     <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-                        Así cambia tu día a día{' '}
-                        <span
-                            className="text-[#3B82F6]"
-                            style={{ textShadow: '0 0 20px rgba(56,189,248,0.4)' }}
-                        >
-                            con VEXIA
+                        Resultados que se notan en{' '}
+                        <span className="text-[#3B82F6]" style={{ textShadow: '0 0 15px rgba(56,189,248,0.2)' }}>
+                            tu rentabilidad
                         </span>
                     </h2>
-                    <p className="mt-4 md:mt-5 text-[#94A3B8] text-base md:text-lg max-w-xl mx-auto">
-                        No son solo números. Es tiempo, tranquilidad y control real sobre tu operación.
+                    <p className="mt-4 md:mt-5 text-[#A1A1AA] text-base md:text-lg max-w-xl mx-auto">
+                        Aumenta tus márgenes y recupera el control de tu tiempo hoy mismo.
                     </p>
                 </motion.div>
 
@@ -132,26 +126,14 @@ const Resultados = () => {
                         return (
                             <motion.div
                                 key={i}
-                                className="rounded-xl p-4 md:p-5"
-                                style={{
-                                    background: 'linear-gradient(135deg, rgba(10,14,24,0.95) 0%, rgba(7,10,18,0.98) 100%)',
-                                    border: '1px solid rgba(37,99,235,0.1)',
-                                }}
+                                className="card-system p-4 md:p-5 flex flex-col justify-start"
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.1 * i }}
                                 viewport={{ once: true }}
-                                whileHover={{
-                                    y: -4,
-                                    borderColor: 'rgba(37,99,235,0.3)',
-                                    boxShadow: '0 15px 40px rgba(0,0,0,0.4), 0 0 20px rgba(37,99,235,0.06)'
-                                }}
                             >
                                 <Icon className="w-4 h-4 md:w-5 md:h-5 mb-2 md:mb-3 text-[#3B82F6]" strokeWidth={1.5} />
-                                <div
-                                    className="text-2xl md:text-3xl font-bold text-[#3B82F6] mb-1 md:mb-2"
-                                    style={{ textShadow: '0 0 15px rgba(56,189,248,0.3)' }}
-                                >
+                                <div className="text-2xl md:text-3xl font-bold text-[#3B82F6] mb-1 md:mb-2" style={{ textShadow: '0 0 10px rgba(56,189,248,0.2)' }}>
                                     {b.prefix && <span>{b.prefix}</span>}
                                     <Counter value={b.value} suffix={b.suffix} delay={200 + i * 100} />
                                 </div>
@@ -172,10 +154,10 @@ const Resultados = () => {
                 >
                     {/* Before */}
                     <motion.div
-                        className="rounded-xl p-4 md:p-5"
+                        className="rounded-xl p-4 md:p-5 backdrop-blur-sm"
                         style={{
-                            background: 'rgba(239,68,68,0.02)',
-                            border: '1px solid rgba(239,68,68,0.1)',
+                            background: 'var(--vexia-bg-elevated)',
+                            border: '1px solid rgba(239,68,68,0.15)',
                         }}
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -197,10 +179,10 @@ const Resultados = () => {
 
                     {/* After */}
                     <motion.div
-                        className="rounded-xl p-4 md:p-5"
+                        className="rounded-xl p-4 md:p-5 backdrop-blur-sm"
                         style={{
-                            background: 'rgba(37,99,235,0.02)',
-                            border: '1px solid rgba(37,99,235,0.12)',
+                            background: 'var(--vexia-bg-card)',
+                            border: '1px solid rgba(37,99,235,0.2)',
                         }}
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -223,20 +205,17 @@ const Resultados = () => {
 
                 {/* Closing */}
                 <motion.p
-                    className="text-center mt-8 md:mt-12 text-xs md:text-sm text-[#64748B]"
+                    className="text-center mt-8 md:mt-12 text-xs md:text-sm text-[#71717A]"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5 }}
                 >
-                    No te entregamos un software y adiós. <span className="text-white font-medium">Te acompañamos para que tu operación realmente funcione.</span>
+                    Somos tu brazo tecnológico. <span className="text-[var(--vexia-text-secondary)] font-medium">Automatizamos hoy para que crezcas mañana.</span>
                 </motion.p>
             </div>
 
-            <div
-                className="absolute bottom-0 left-0 right-0 h-px"
-                style={{ background: 'linear-gradient(90deg, transparent, rgba(37,99,235,0.3), transparent)' }}
-            />
+            <div className="absolute bottom-0 left-0 right-0 section-line" />
         </section>
     );
 };

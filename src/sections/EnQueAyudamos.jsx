@@ -6,23 +6,23 @@ const EnQueAyudamos = () => {
     {
       numero: "01",
       icon: Workflow,
-      titulo: "Automatización de procesos",
+      titulo: "Automatización con IA",
       descripcion:
-        "Reducimos tareas manuales y errores conectando formularios, WhatsApp, correos, planillas y sistemas en flujos automáticos.",
+        "Integramos tus canales (WhatsApp, correo, CRM) en flujos automáticos 24/7.",
     },
     {
       numero: "02",
-      icon: Globe,
-      titulo: "Desarrollo web y sistemas",
+      icon: BarChart3,
+      titulo: "Control Total con Datos",
       descripcion:
-        "Creamos páginas web y soluciones funcionales a medida para captar clientes, ordenar procesos y mejorar la operación de tu empresa.",
+        "Dashboards precisos en tiempo real. Deja de adivinar y dirige tu negocio con seguridad.",
     },
     {
       numero: "03",
-      icon: BarChart3,
-      titulo: "BI y dashboards",
+      icon: Globe,
+      titulo: "Desarrollo Web (Opcional)",
       descripcion:
-        "Transformamos tus datos en paneles e indicadores claros para que tomes decisiones con más control y visibilidad del negocio.",
+        "Sitios web ultra-rápidos y modernos, diseñados para captar leads y complementar tu automatización.",
     },
   ];
 
@@ -48,13 +48,7 @@ const EnQueAyudamos = () => {
       id="como-ayudamos"
       className="relative py-16 md:py-28 lg:py-36 overflow-hidden"
     >
-      <div
-        className="absolute top-0 left-0 right-0 h-px"
-        style={{
-          background:
-            "linear-gradient(90deg, transparent, rgba(37,99,235,0.3), transparent)",
-        }}
-      />
+      <div className="absolute top-0 left-0 right-0 section-line" />
 
       <motion.div
         className="relative z-10 max-w-5xl mx-auto px-5 md:px-6"
@@ -77,24 +71,17 @@ const EnQueAyudamos = () => {
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight"
           >
             <span className="text-white">Soluciones en </span>
-            <span
-              className="text-[#3B82F6]"
-              style={{ textShadow: "0 0 20px rgba(56,189,248,0.4)" }}
-            >
-              automatización, desarrollo web y BI
+            <span className="text-[#3B82F6]" style={{ textShadow: "0 0 15px rgba(56,189,248,0.2)" }}>
+              automatización IA, web y datos
             </span>
             <span className="text-[#64748B]">.</span>
           </motion.h2>
 
           <motion.p
             variants={itemVariants}
-            className="mt-4 md:mt-5 text-[#94A3B8] text-base md:text-lg max-w-2xl mx-auto"
+            className="mt-4 md:mt-5 text-[var(--vexia-text-secondary)] text-base md:text-lg max-w-2xl mx-auto"
           >
-            Diseñamos soluciones tecnológicas para que tu empresa trabaje mejor:
-            <span className="text-white">
-              {" "}
-              menos tareas manuales, mejor presencia digital y decisiones con datos.
-            </span>
+            Sistemas diseñados para escalar tu negocio mediante <span className="text-white">inteligencia artificial y automatización de procesos.</span>
           </motion.p>
         </div>
 
@@ -108,31 +95,20 @@ const EnQueAyudamos = () => {
             return (
               <motion.div key={index} variants={itemVariants} className="group">
                 <motion.div
-                  className="relative rounded-xl p-5 md:p-7 h-full overflow-hidden"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgba(10,14,24,0.95) 0%, rgba(7,10,18,0.98) 100%)",
-                    border: "1px solid rgba(37,99,235,0.1)",
-                  }}
-                  whileHover={{
-                    y: -6,
-                    borderColor: "rgba(37,99,235,0.3)",
-                    boxShadow:
-                      "0 20px 50px rgba(0,0,0,0.5), 0 0 40px rgba(37,99,235,0.08)",
-                  }}
+                  className="card-system p-5 md:p-7 h-full flex flex-col justify-start"
                   transition={{ duration: 0.3 }}
                 >
                   {/* Number watermark */}
-                  <span className="absolute top-3 right-4 text-5xl font-bold text-white/[0.02] group-hover:text-[#2563EB]/[0.06] transition-colors duration-500">
+                  <span className="absolute top-3 right-4 text-5xl font-bold text-white/[0.02] group-hover:text-[#3B82F6]/[0.06] transition-colors duration-500 pointer-events-none">
                     {paso.numero}
                   </span>
 
                   {/* Icon */}
                   <div
-                    className="w-10 h-10 md:w-12 md:h-12 rounded-lg flex items-center justify-center mb-4 md:mb-5"
+                    className="w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center mb-4 md:mb-5"
                     style={{
-                      background: "rgba(37,99,235,0.1)",
-                      border: "1px solid rgba(37,99,235,0.2)",
+                      background: "rgba(255,255,255,0.03)",
+                      border: "1px solid rgba(255,255,255,0.08)",
                     }}
                   >
                     <Icon className="w-5 h-5 text-[#3B82F6]" strokeWidth={1.5} />
@@ -146,14 +122,7 @@ const EnQueAyudamos = () => {
                     {paso.descripcion}
                   </p>
 
-                  {/* Top glow on hover */}
-                  <div
-                    className="absolute top-0 left-6 right-6 h-px opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    style={{
-                      background:
-                        "linear-gradient(90deg, transparent, rgba(56,189,248,0.4), transparent)",
-                    }}
-                  />
+                  {/* Top glow on hover removed as card-system handles it */}
                 </motion.div>
               </motion.div>
             );
@@ -165,30 +134,18 @@ const EnQueAyudamos = () => {
           variants={itemVariants}
           className="flex justify-center mt-10 md:mt-14"
         >
-          <div
-            className="px-5 py-2.5 rounded-full"
-            style={{
-              background: "rgba(7,10,18,0.8)",
-              border: "1px solid rgba(37,99,235,0.12)",
-            }}
-          >
-            <p className="text-sm text-[#94A3B8] text-center">
-              Tecnología con foco en resultados:{" "}
+          <div className="card-system px-6 py-3 rounded-full">
+            <p className="text-sm text-[#A1A1AA] text-center">
+              Tecnología con un único fin:{" "}
               <span className="text-white font-medium">
-                automatizar, vender mejor y decidir con datos.
+                automatizar tus procesos y multiplicar tus ganancias.
               </span>
             </p>
           </div>
         </motion.div>
       </motion.div>
 
-      <div
-        className="absolute bottom-0 left-0 right-0 h-px"
-        style={{
-          background:
-            "linear-gradient(90deg, transparent, rgba(37,99,235,0.3), transparent)",
-        }}
-      />
+      <div className="absolute bottom-0 left-0 right-0 section-line" />
     </section>
   );
 };

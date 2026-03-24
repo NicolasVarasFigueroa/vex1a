@@ -39,10 +39,10 @@ const AboutVexia = () => {
 
             {/* Background glow */}
             <div
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] pointer-events-none"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] pointer-events-none"
                 style={{
-                    background: 'radial-gradient(ellipse at center, rgba(37,99,235,0.08) 0%, transparent 60%)',
-                    filter: 'blur(80px)',
+                    background: 'radial-gradient(ellipse at center, rgba(37,99,235,0.05) 0%, transparent 70%)',
+                    filter: 'blur(100px)',
                 }}
             />
 
@@ -57,23 +57,22 @@ const AboutVexia = () => {
                     transition={{ duration: 0.6 }}
                 >
                     <span className="inline-block text-xs font-medium tracking-[0.2em] text-[#38BDF8] uppercase mb-6">
-                        Quiénes somos
+                        Por qué VEXIA
                     </span>
 
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-                        Un estudio de automatización
+                        No vendemos software.
                         <br />
                         <span
                             className="text-[#3B82F6]"
-                            style={{ textShadow: '0 0 20px rgba(56,189,248,0.4)' }}
+                            style={{ textShadow: '0 0 20px rgba(59,130,246,0.5)' }}
                         >
-                            que transforma operaciones.
+                            Construimos motores de crecimiento.
                         </span>
                     </h2>
 
-                    <p className="text-lg text-[#94A3B8] leading-relaxed max-w-2xl mx-auto">
-                        No vendemos software y nos vamos. Diseñamos, implementamos y mantenemos
-                        tu operación automática. Tú te enfocas en crecer.
+                    <p className="text-lg text-[var(--vexia-text-secondary)] leading-relaxed max-w-2xl mx-auto">
+                        Entendemos tu giro de negocio y creamos tecnología a medida (Diseño Web + IA + RPA) que se integra sin dolores de cabeza. Tú te enfocas en liderar, nosotros en que la operación fluya.
                     </p>
                 </motion.div>
 
@@ -90,28 +89,18 @@ const AboutVexia = () => {
                         return (
                             <motion.div
                                 key={i}
-                                className="group rounded-2xl p-6 text-center"
-                                style={{
-                                    background: 'linear-gradient(135deg, rgba(10,14,24,0.9) 0%, rgba(7,10,18,0.95) 100%)',
-                                    border: '1px solid rgba(37,99,235,0.1)',
-                                }}
+                                className="group card-system p-6 text-center h-full flex flex-col items-center"
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.1 * i }}
                                 viewport={{ once: true }}
-                                whileHover={{
-                                    y: -4,
-                                    borderColor: 'rgba(37,99,235,0.3)',
-                                    boxShadow: '0 15px 40px rgba(0,0,0,0.4), 0 0 20px rgba(37,99,235,0.08)'
-                                }}
                             >
                                 {/* Icon */}
                                 <div
-                                    className="w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-5"
+                                    className="w-14 h-14 rounded-xl flex items-center justify-center mb-5"
                                     style={{
-                                        background: 'linear-gradient(135deg, rgba(37,99,235,0.15), rgba(37,99,235,0.05))',
-                                        border: '1px solid rgba(37,99,235,0.2)',
-                                        boxShadow: '0 0 20px rgba(37,99,235,0.1)'
+                                        background: 'rgba(255,255,255,0.03)',
+                                        border: '1px solid rgba(255,255,255,0.08)',
                                     }}
                                 >
                                     <Icon className="w-6 h-6 text-[#3B82F6]" strokeWidth={1.5} />
@@ -143,8 +132,8 @@ const AboutVexia = () => {
                                 key={i}
                                 className="flex items-center gap-3 px-5 py-3 rounded-full"
                                 style={{
-                                    background: 'rgba(37,99,235,0.05)',
-                                    border: '1px solid rgba(37,99,235,0.15)',
+                                    background: 'rgba(255,255,255,0.02)',
+                                    border: '1px solid rgba(255,255,255,0.08)',
                                 }}
                             >
                                 <Icon className="w-4 h-4 text-[#38BDF8]" strokeWidth={1.5} />
