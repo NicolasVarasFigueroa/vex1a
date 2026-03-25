@@ -99,23 +99,23 @@ const Resultados = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <span className="inline-block text-xs font-medium tracking-[0.2em] text-[#38BDF8] uppercase mb-6">
+                    <span className="inline-block text-xs font-medium tracking-[0.2em] text-[#38BDF8] uppercase mb-6 px-2">
                         El Impacto VEXIA
                     </span>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white px-2 sm:px-0 leading-tight">
                         Resultados que se notan en{' '}
                         <span className="text-[#3B82F6]" style={{ textShadow: '0 0 15px rgba(56,189,248,0.2)' }}>
                             tu rentabilidad
                         </span>
                     </h2>
-                    <p className="mt-4 md:mt-5 text-[#A1A1AA] text-base md:text-lg max-w-xl mx-auto">
+                    <p className="mt-5 md:mt-5 text-[#A1A1AA] text-base md:text-lg max-w-xl mx-auto px-4 sm:px-0">
                         Aumenta tus márgenes y recupera el control de tu tiempo hoy mismo.
                     </p>
                 </motion.div>
 
                 {/* Benefits Grid */}
                 <motion.div
-                    className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 mb-10 md:mb-16"
+                    className="grid grid-cols-1 gap-4 sm:gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-12 md:mb-16"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -137,8 +137,8 @@ const Resultados = () => {
                                     {b.prefix && <span>{b.prefix}</span>}
                                     <Counter value={b.value} suffix={b.suffix} delay={200 + i * 100} />
                                 </div>
-                                <div className="text-xs md:text-sm font-medium text-white mb-0.5 md:mb-1">{b.titulo}</div>
-                                <div className="text-[10px] md:text-xs text-[#64748B] leading-relaxed hidden sm:block">{b.descripcion}</div>
+                                <div className="text-sm md:text-sm font-medium text-white mb-1.5 md:mb-1">{b.titulo}</div>
+                                <div className="text-xs md:text-xs text-[#64748B] leading-relaxed">{b.descripcion}</div>
                             </motion.div>
                         );
                     })}

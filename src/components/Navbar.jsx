@@ -57,7 +57,7 @@ const Navbar = () => {
               src={logo}
               alt="Vexia"
               className={`block w-auto object-contain transition-all duration-300 ${
-                scrolled ? "h-16" : "h-20"
+                scrolled ? "h-10 md:h-12" : "h-12 md:h-14"
               }`}
               draggable="false"
             />
@@ -162,11 +162,22 @@ const Navbar = () => {
               ))}
 
               <button
-                className="btn-primary-ai mt-6 text-base font-semibold w-full max-w-xs"
+                className="btn-primary-ai mt-6 text-base font-semibold w-full max-w-xs py-3"
                 onClick={() => goTo("/planes")}
               >
                 Empezar ahora
               </button>
+
+              <a
+                href="https://wa.me/569XXXXXXXX?text=Hola%20Vexia,%20quiero%20cotizar%20una%20automatizaci%C3%B3n"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-center gap-2 w-full max-w-xs py-3 rounded-full border border-white/10 bg-white/5 text-white hover:bg-white/10 transition-colors"
+                onClick={() => setMobileOpen(false)}
+              >
+                <img src={waIcon} alt="WhatsApp" className="h-5 w-5 object-contain" />
+                Hablar por WhatsApp
+              </a>
             </div>
           </motion.div>
         )}

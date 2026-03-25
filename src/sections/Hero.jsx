@@ -42,9 +42,9 @@ const Hero = () => {
     };
 
     return (
-        <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-5 mt-5 md:px-6">
+        <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 sm:px-6">
 
-            <div className="relative z-10 max-w-4xl mx-auto text-center pt-16 md:pt-0">
+            <div className="relative z-10 w-full max-w-4xl mx-auto text-center pt-28 pb-12 md:pt-0 md:pb-0">
 
                 {/* Badge */}
                 {/* Badge - Hidden on mobile for cleaner first impression */}
@@ -59,7 +59,7 @@ const Hero = () => {
 
                 {/* Main Title - Human centered */}
                 <motion.h1
-                    className="text-[2rem] leading-[1.15] sm:text-5xl md:text-6xl lg:text-7xl font-bold sm:leading-[1.08] tracking-tight"
+                    className="text-4xl leading-[1.2] sm:text-5xl md:text-6xl lg:text-7xl font-bold sm:leading-[1.08] tracking-tight px-2 sm:px-0"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
@@ -88,7 +88,7 @@ const Hero = () => {
 
                 {/* Subtitle - Benefit focused */}
                 <motion.p
-                    className="mt-5 md:mt-8 text-base sm:text-lg md:text-xl text-[var(--vexia-text-secondary)] max-w-xl md:max-w-2xl mx-auto leading-relaxed px-2 sm:px-0"
+                    className="mt-6 md:mt-8 text-base sm:text-lg md:text-xl text-[var(--vexia-text-secondary)] max-w-xl md:max-w-2xl mx-auto leading-relaxed px-4 sm:px-0"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
@@ -100,7 +100,7 @@ const Hero = () => {
 
                 {/* CTAs */}
                 <motion.div
-                    className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 md:mt-12 w-full sm:w-auto px-4 sm:px-0"
+                    className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-4 mt-10 md:mt-12 w-full px-6 sm:px-0"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.7 }}
@@ -118,7 +118,7 @@ const Hero = () => {
 
                 {/* Benefits - Human language */}
                 <motion.div
-                    className="grid grid-cols-1 gap-3 mt-12 sm:grid-cols-3 sm:gap-6 sm:mt-24 max-w-3xl mx-auto w-full"
+                    className="grid grid-cols-1 gap-4 mt-16 sm:grid-cols-3 sm:gap-6 sm:mt-24 max-w-3xl mx-auto w-full px-2 sm:px-0"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.9 }}
@@ -126,7 +126,7 @@ const Hero = () => {
                     {benefits.map((benefit, i) => (
                         <motion.div
                             key={i}
-                            className="card-system p-5 sm:p-7 text-left flex flex-col justify-center"
+                            className="card-system p-6 sm:p-7 text-left flex flex-col justify-center"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 1 + i * 0.15 }}

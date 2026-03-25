@@ -293,14 +293,12 @@ const VexiaFlow = () => {
                         </motion.p>
                     </AnimatePresence>
 
-                    {/* Compact Horizontal Flow */}
-                    <div className="flex items-center justify-center gap-2 w-full max-w-[340px]">
+                    {/* Vertical Flow Container */}
+                    <div className="flex flex-col items-center gap-3 w-full">
 
                         {/* Channel Node */}
-                        <div className="flex flex-col items-center gap-2 flex-shrink-0">
-                            <motion.div
-                                className="w-12 h-12 rounded-lg flex items-center justify-center card-system"
-                            >
+                        <div className="flex flex-col items-center gap-2">
+                            <motion.div className="w-14 h-14 rounded-xl flex items-center justify-center card-system">
                                 <AnimatePresence mode="wait">
                                     <motion.div
                                         key={sceneIndex + '-m-ch'}
@@ -309,18 +307,14 @@ const VexiaFlow = () => {
                                         exit={{ opacity: 0, scale: 0.8 }}
                                         transition={{ duration: 0.25 }}
                                     >
-                                        <ChannelIcon
-                                            className="w-5 h-5"
-                                            style={{ color: currentScene.channel.color }}
-                                            strokeWidth={1.5}
-                                        />
+                                        <ChannelIcon className="w-6 h-6" style={{ color: currentScene.channel.color }} strokeWidth={1.5} />
                                     </motion.div>
                                 </AnimatePresence>
                             </motion.div>
                             <AnimatePresence mode="wait">
                                 <motion.span
                                     key={sceneIndex + '-m-ch-l'}
-                                    className="text-[10px] text-[#64748B] whitespace-nowrap"
+                                    className="text-xs text-[#94A3B8] font-medium"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     exit={{ opacity: 0 }}
@@ -330,57 +324,43 @@ const VexiaFlow = () => {
                             </AnimatePresence>
                         </div>
 
-                        {/* Line Left */}
-                        <div className="relative w-6 h-px flex-shrink-0">
-                            <div
-                                className="absolute inset-0"
-                                style={{ background: 'linear-gradient(90deg, rgba(37,99,235,0.2), rgba(37,99,235,0.5))' }}
-                            />
+                        {/* Vertical Line Top */}
+                        <div className="relative w-px h-8 md:hidden">
+                            <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(37,99,235,0.2), rgba(37,99,235,0.5))' }} />
                             <motion.div
-                                className="absolute w-1 h-1 rounded-full bg-[#3B82F6] top-1/2 -translate-y-1/2"
-                                style={{ boxShadow: '0 0 6px rgba(59,130,246,0.8)' }}
-                                animate={{ left: ['0%', '100%'] }}
+                                className="absolute w-1.5 h-1.5 rounded-full bg-[#3B82F6] left-1/2 -translate-x-1/2"
+                                style={{ boxShadow: '0 0 8px rgba(59,130,246,0.8)' }}
+                                animate={{ top: ['0%', '100%'] }}
                                 transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }}
                             />
                         </div>
 
                         {/* VEXIA Center */}
-                        <motion.div
-                            className="relative w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0 card-system"
-                        >
-                            <span
-                                className="text-sm font-bold text-white"
-                                style={{ textShadow: '0 0 12px rgba(59,130,246,0.5)' }}
-                            >
+                        <motion.div className="relative w-20 h-20 rounded-2xl flex items-center justify-center card-system">
+                            <span className="text-lg font-bold text-white" style={{ textShadow: '0 0 15px rgba(59,130,246,0.5)' }}>
                                 VEXIA
                             </span>
-                            {/* Subtle pulse */}
                             <motion.div
-                                className="absolute inset-0 rounded-xl border border-[#3B82F6]/20"
-                                animate={{ scale: [1, 1.08, 1], opacity: [0.4, 0, 0.4] }}
+                                className="absolute inset-0 rounded-2xl border border-[#3B82F6]/20"
+                                animate={{ scale: [1, 1.1, 1], opacity: [0.4, 0, 0.4] }}
                                 transition={{ duration: 3, repeat: Infinity }}
                             />
                         </motion.div>
 
-                        {/* Line Right */}
-                        <div className="relative w-6 h-px flex-shrink-0">
-                            <div
-                                className="absolute inset-0"
-                                style={{ background: 'linear-gradient(90deg, rgba(37,99,235,0.5), rgba(34,197,94,0.4))' }}
-                            />
+                        {/* Vertical Line Bottom */}
+                        <div className="relative w-px h-8 md:hidden">
+                            <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(37,99,235,0.5), rgba(34,197,94,0.4))' }} />
                             <motion.div
-                                className="absolute w-1 h-1 rounded-full bg-[#22C55E] top-1/2 -translate-y-1/2"
-                                style={{ boxShadow: '0 0 6px rgba(34,197,94,0.8)' }}
-                                animate={{ left: ['0%', '100%'] }}
+                                className="absolute w-1.5 h-1.5 rounded-full bg-[#22C55E] left-1/2 -translate-x-1/2"
+                                style={{ boxShadow: '0 0 8px rgba(34,197,94,0.8)' }}
+                                animate={{ top: ['0%', '100%'] }}
                                 transition={{ duration: 1.5, repeat: Infinity, ease: 'linear', delay: 0.75 }}
                             />
                         </div>
 
                         {/* Result Node */}
-                        <div className="flex flex-col items-center gap-2 flex-shrink-0">
-                            <motion.div
-                                className="w-12 h-12 rounded-lg flex items-center justify-center card-system"
-                            >
+                        <div className="flex flex-col items-center gap-2">
+                            <motion.div className="w-14 h-14 rounded-xl flex items-center justify-center card-system">
                                 <AnimatePresence mode="wait">
                                     <motion.div
                                         key={sceneIndex + '-m-res'}
@@ -389,17 +369,14 @@ const VexiaFlow = () => {
                                         exit={{ opacity: 0, scale: 0.8 }}
                                         transition={{ duration: 0.25 }}
                                     >
-                                        <ResultIcon
-                                            className="w-5 h-5 text-[#22C55E]"
-                                            strokeWidth={1.5}
-                                        />
+                                        <ResultIcon className="w-6 h-6 text-[#22C55E]" strokeWidth={1.5} />
                                     </motion.div>
                                 </AnimatePresence>
                             </motion.div>
                             <AnimatePresence mode="wait">
                                 <motion.span
                                     key={sceneIndex + '-m-res-l'}
-                                    className="text-[10px] text-[#64748B] text-center max-w-[70px] leading-tight"
+                                    className="text-xs text-[#94A3B8] font-medium text-center"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     exit={{ opacity: 0 }}

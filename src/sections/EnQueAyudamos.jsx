@@ -68,7 +68,7 @@ const EnQueAyudamos = () => {
 
           <motion.h2
             variants={itemVariants}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold leading-tight tracking-tight px-2 sm:px-0"
           >
             <span className="text-white">Soluciones en </span>
             <span className="text-[#3B82F6]" style={{ textShadow: "0 0 15px rgba(56,189,248,0.2)" }}>
@@ -95,7 +95,7 @@ const EnQueAyudamos = () => {
             return (
               <motion.div key={index} variants={itemVariants} className="group">
                 <motion.div
-                  className="card-system p-5 md:p-7 h-full flex flex-col justify-start"
+                  className="card-system p-6 md:p-8 h-full flex flex-col justify-start"
                   transition={{ duration: 0.3 }}
                 >
                   {/* Number watermark */}

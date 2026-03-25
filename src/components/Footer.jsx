@@ -18,9 +18,9 @@ const Footer = () => {
     >
       <div className="max-w-5xl mx-auto px-5 md:px-6">
         {/* Grid */}
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-6 md:gap-10">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-6 md:gap-10">
           {/* Logo */}
-          <div className="col-span-2 md:col-span-2">
+          <div className="col-span-1 sm:col-span-2 md:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-4">
               <img
                 src={vexiaLogo}
@@ -128,7 +128,7 @@ const Footer = () => {
           </div>
 
           {/* Contacto */}
-          <div className="col-span-2 md:col-span-1">
+          <div className="col-span-1 sm:col-span-2 md:col-span-1">
             <h4 className="text-xs uppercase tracking-[0.15em] text-[#64748B] font-medium mb-4">
               Contacto
             </h4>
