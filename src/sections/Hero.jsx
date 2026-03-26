@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
+import { MessageCircle, Calendar } from 'lucide-react';
+import ContactModal from '../components/ContactModal';
 const AnimatedCounter = ({ value, suffix = '', delay = 0 }) => {
     const [count, setCount] = useState(0);
     const numericValue = parseInt(value.replace(/\D/g, ''));
@@ -31,6 +33,8 @@ const AnimatedCounter = ({ value, suffix = '', delay = 0 }) => {
 };
 
 const Hero = () => {
+    const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
     const benefits = [
         { value: '300', suffix: '+', label: 'horas al mes de vuelta para tu equipo' },
         { value: '80', suffix: '%', label: 'menos tareas que nadie quiere hacer' },
@@ -43,6 +47,7 @@ const Hero = () => {
 
     return (
         <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 sm:px-6">
+            <ContactModal open={isContactModalOpen} onClose={() => setIsContactModalOpen(false)} />
 
             <div className="relative z-10 w-full max-w-4xl mx-auto text-center pt-28 pb-12 md:pt-0 md:pb-0">
 
@@ -105,14 +110,16 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.7 }}
                 >
-                    <Link to="/service" className="w-full sm:w-auto">
-                        <button className="btn-primary-ai w-full sm:w-auto min-h-[56px] sm:min-h-0 text-base sm:text-sm">
-                            <span className="relative z-10">Agendar Consultoría Gratuita</span>
+                    <a href="https://wa.me/569XXXXXXXX?text=Hola%20Vexia,%20quiero%20agendar%20una%20demo" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                        <button className="btn-primary-ai w-full sm:w-auto min-h-[56px] sm:min-h-0 text-base sm:text-sm flex items-center justify-center gap-2">
+                            <MessageCircle className="w-5 h-5 relative z-10" />
+                            <span className="relative z-10">Comenzar Ahora</span>
                         </button>
-                    </Link>
+                    </a>
 
-                    <button className="btn-secondary-ai w-full sm:w-auto min-h-[56px] sm:min-h-0 text-base sm:text-sm">
-                        Ver Casos de Éxito
+                    <button onClick={() => setIsContactModalOpen(true)} className="btn-secondary-ai w-full sm:w-auto min-h-[56px] sm:min-h-0 text-base sm:text-sm flex items-center justify-center gap-2">
+                        <Calendar className="w-5 h-5" />
+                        <span>Agenda una Demo</span>
                     </button>
                 </motion.div>
 
